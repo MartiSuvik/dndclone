@@ -84,7 +84,7 @@ const VisionnaireHero = () => {
           muted
           loop
           playsInline
-          preload="none"
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover scale-105"
           poster="https://res.cloudinary.com/designcenter/image/upload/Bespoke_Furniture_Collection_In_New_York_City.avif"
         >

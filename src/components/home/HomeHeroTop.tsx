@@ -81,7 +81,7 @@ const HomeHeroTop = () => {
           muted
           loop
           playsInline
-          preload="none"
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover scale-105"
           poster="https://res.cloudinary.com/designcenter/image/upload/Hero_Video_Banner.avif"
         >

@@ -106,6 +106,7 @@ export function HeroScrollDemoProduct() {
             muted
             loop
             playsInline
+            preload="metadata"
             className="mx-auto rounded-2xl object-cover h-full w-full"
           />
         </div>
