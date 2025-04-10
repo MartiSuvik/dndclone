@@ -21,7 +21,7 @@ interface BlogPostProps {
 const BlogPost = ({ post, index }: BlogPostProps) => {
   return (
     <motion.article 
-      className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+      className="bg-white overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -50,7 +50,7 @@ const BlogPost = ({ post, index }: BlogPostProps) => {
       </div>
 
       <div className="p-6">
-        <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
+        <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
           <span>{new Date(post.date).toLocaleDateString('en-US', { 
             year: 'numeric',
             month: 'long',
@@ -62,11 +62,11 @@ const BlogPost = ({ post, index }: BlogPostProps) => {
           </div>
         </div>
 
-        <h3 className="text-xl font-serif mb-3 text-gray-900 dark:text-white">
+        <h3 className="text-xl font-serif mb-3 text-gray-900">
           {post.title}
         </h3>
         
-        <p className="text-gray-600 dark:text-gray-300 mb-6 line-clamp-2">
+        <p className="text-gray-600 mb-6 line-clamp-2">
           {post.excerpt}
         </p>
 
