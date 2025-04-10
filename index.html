@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="seobility" content="ba9f3dd7bb72a8fcec45b8f095f729f7">
+    <link rel="icon" type="image/avif" href="https://res.cloudinary.com/designcenter/image/upload/Favicon_DnD.avif" />
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/designcenter/image/upload/Favicon_DnD.avif" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D&D</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script type="text/javascript">
+      let voiceflowLoaded = false;
+
+      function loadVoiceflow() {
+        if (!voiceflowLoaded) {
+          let v = document.createElement("script");
+          v.onload = function () {
+            window.voiceflow.chat.load({
+              verify: { projectID: "67cbedb6307e530c4939188b" },
+              url: "https://general-runtime.voiceflow.com",
+              versionID: "production",
+              voice: {
+                url: "https://runtime-api.voiceflow.com"
+              }
+            });
+          };
+          v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+          v.type = "text/javascript";
+          document.body.appendChild(v);
+          voiceflowLoaded = true;
+        }
+      }
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+          loadVoiceflow();
+        }
+      });
+
+      document.addEventListener("click", function () {
+        loadVoiceflow();
+      }, { once: true });
+    </script>
+  </body>
+</html>
