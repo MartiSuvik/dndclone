@@ -36,7 +36,7 @@ export function TestimonialsSection({
 
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
           <div className="group flex overflow-hidden p-2 [--gap:1rem] [--duration:120s]">
-            {/* First marquee container */}
+            {/* First marquee container - Renders the testimonials once */}
             <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
               {testimonials.map((testimonial, i) => (
                 <TestimonialCard 
@@ -46,8 +46,8 @@ export function TestimonialsSection({
               ))}
             </div>
             
-            {/* Second marquee container (duplicate) for seamless loop */}
-            <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
+            {/* Second marquee container (duplicate) - Renders the testimonials again for seamless loop */}
+            <div aria-hidden="true" className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused]">
               {testimonials.map((testimonial, i) => (
                 <TestimonialCard 
                   key={`set2-${i}`}

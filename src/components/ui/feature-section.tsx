@@ -25,7 +25,6 @@ interface FeatureStepsProps {
 export function FeatureSteps({
   features,
   className,
-  title = "How to get Started",
   autoPlayInterval = 3000,
   imageHeight = "h-[250px]",
   titleClassName,
@@ -86,7 +85,6 @@ export function FeatureSteps({
           isDarkBackground ? "text-white" : "text-gray-900", 
           titleClassName
         )}>
-          {title}
         </h2>
 
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-6 md:gap-10 items-center"> {/* Changed flex-col to flex-col-reverse */}

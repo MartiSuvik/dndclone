@@ -42,7 +42,7 @@ export function FeatureStepsDemo () {
     <section aria-label="Luxury Interior Design Process" className="px-6 md:px-12 py-12 md:py-20">
       <div className="text-center">
         <h2 className="text-3xl md:text-5xl text-white">
-          TURN YOUR VISION INTO <span className="text-[#C5A267]">LUXURY</span>
+          HOW TO TURN YOUR VISION INTO <span className="text-[#C5A267]">LUXURY</span>
         </h2>
         <p className="mt-3 text-white max-w-3xl mx-auto text-lg md:text-xl">
           From concept to completion, our bespoke design process ensures an exclusive, elegant, and timeless living experience.
@@ -51,7 +51,6 @@ export function FeatureStepsDemo () {
 
       <FeatureSteps 
         features={features}
-        title=""
         autoPlayInterval={4000}
         imageHeight="h-[500px]"
         titleClassName="text-white"

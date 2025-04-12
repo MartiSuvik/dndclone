@@ -18,7 +18,7 @@ const slides = [
   {
     id: 2,
     title: 'Concept',
-    description: 'Receive **tailored sketches** that bring your **vision to life**.',
+    description: 'Receive **tailored sketches** of your home that brings your **vision to life**.',
     icon: <span className="w-6 h-6 sm:w-8 sm:h-8 text-white text-2xl sm:text-3xl font-bold flex items-center justify-center">{2}</span>,
     imageUrl: 'https://images.unsplash.com/photo-1600428610161-e98636332e98?q=80&w=2940&auto=format&fit=crop',
     details: [
