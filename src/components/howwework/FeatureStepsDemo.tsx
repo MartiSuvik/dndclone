@@ -1,28 +1,28 @@
 import { FeatureSteps } from "../ui/feature-section"
 
 const features = [
-  { 
-    step: 'Step 1', 
-    title: 'Discover Your Luxury Interior Style',
-    content: 'Our experts refine your vision—whether contemporary, timeless, or uniquely bespoke. We craft a design plan tailored to your lifestyle with a seamless consultation.',
+  {
+    step: 'Step 1',
+    title: 'Imagine Your Ideal Space',
+    content: 'Begin with a relaxed, personalized consultation. We listen, guide, and shape your vision—turning ideas into a refined design concept.',
     image: 'https://res.cloudinary.com/designcenter/image/upload/Your_Vision_Made_Design.avif',
     alt: "Luxury interior design consultation with expert designers at D&D Design Center.",
   },
-  { 
+  {
     step: 'Step 2',
-    title: 'Precision Craftsmanship & Italian Design',
-    content: 'We collaborate with top Italian artisans to deliver flawless craftsmanship. Every piece undergoes strict quality control, ensuring durability and precision.',
+    title: 'Crafted in Italy, Tailored for You',
+    content: 'Your interiors come to life through master Italian artisanship. Each piece is made to order, with meticulous attention to beauty and form.',
     image: 'https://res.cloudinary.com/designcenter/image/upload/Made_With_Italian_Craftsmanship.avif',
     alt: "High-end furniture craftsmanship using premium Italian materials.",
   },
-  { 
+  {
     step: 'Step 3',
-    title: 'Experience Timeless Elegance in Your Home',
-    content: 'Luxury interiors crafted for elegance and comfort. We offer transparent pricing, flexible payment plans, and a stress-free process from design to installation.',
+    title: 'Live the Luxury, Effortlessly',
+    content: 'From white-glove delivery to expert installation, we handle every detail. All that’s left is to enjoy your transformed space—made entirely for you.',
     image: 'https://res.cloudinary.com/designcenter/image/upload/Completed_Luxury_Bedroom_Set.avif',
     alt: "Luxury bedroom interior with elegant furnishings and bespoke decor.",
   },
-];
+]
 
 const triggerFooterContact = () => {
   const footerElement = document.querySelector('#footer');

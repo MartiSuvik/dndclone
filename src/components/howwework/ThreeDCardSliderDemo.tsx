@@ -5,7 +5,7 @@ const slides = [
   {
     id: 1,
     title: 'Consultation',
-    description: 'Visit our **New York** showroom or connect via email for a **personalized consultation**.',
+    description: 'Visit our **NYC** showroom or connect via email for a **personalized consultation**.',
     icon: <span className="w-6 h-6 sm:w-8 sm:h-8 text-white text-2xl sm:text-3xl font-bold flex items-center justify-center">{1}</span>,
     imageUrl: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2940&auto=format&fit=crop',
     details: [

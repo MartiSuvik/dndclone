@@ -80,11 +80,13 @@ const SustainabilityPath: React.FC = () => {
                   The Timeless Elegance of Woodcraft
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-light text-justify">
-                Wood has always stood as a symbol of warmth, heritage, and endurance. As part of our eco friendly home furniture promise, we source timbers that are both exquisite and ethically harvested. 
-                Each handcrafted piece tells a sustainability story—blending precision, natural materials, and artistry into lasting luxury. 
-                  <br /><br />
-                  Our artisans work with intention, designing sustainably sourced furniture that’s both stunning and responsible.
-                </p>
+  Wood has always stood as a symbol of warmth, heritage, and endurance. As part of our eco friendly home furniture promise, we source timbers that are both exquisite and ethically harvested. 
+  Each handcrafted piece tells a sustainability story—blending precision, natural materials, and artistry into lasting luxury. 
+  <br /><br />
+  Our artisans work with intention, designing sustainably sourced furniture that’s both stunning and responsible.
+  <br /><br />
+  This philosophy is part of our sustainability commitment — merging refined aesthetics with mindful sourcing, rooted in the traditions of Italian craftsmanship.
+</p>
             </div>
             <div className="order-1 lg:order-2">
               <img
@@ -103,11 +105,12 @@ const SustainabilityPath: React.FC = () => {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif mb-6 text-[#3e533c]">
                   Upholstery - Where Luxury Meets Comfort
                 </h2>
-                  <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-light text-justify">
-                  Our master upholsterers craft with intention—pairing soft-touch, eco-certified textiles with luxurious comfort. The result? Sustainability products that blend tactile beauty with ergonomic performance. 
-                    <br /><br />
-                    Every stitch honors our belief that environmental friendly products can also redefine elegance. With every chair and cushion, we prove that comfort and conscience go hand in hand.
-                  </p>
+                <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-light text-justify">
+  Our master upholsterers craft with intention—pairing soft-touch, eco-certified textiles with luxurious comfort. The result? Sustainability products that blend tactile beauty with ergonomic performance. 
+  <br /><br />
+  Every stitch honors our belief that environmental friendly products can also redefine elegance. With every chair and cushion, we prove that comfort and conscience go hand in hand—guided by Italian craftsmanship and a deep-rooted sustainability commitment.
+</p>
+
             </div>
             <div className="lg:order-1">
               <img

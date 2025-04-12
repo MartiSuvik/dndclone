@@ -71,7 +71,7 @@ const CaseStudies: React.FC = () => {
     <section ref={caseStudiesRef} className="py-12 sm:py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-black text-center mb-8 sm:mb-12 md:mb-8">
-          TRANSFORMATIONS
+          HOME TRANSFORMATIONS
         </h2>
         <p className="text-[#C4A661] text-center text-lg sm:text-xl mb-8 font-medium">
           Slide on the images to compare

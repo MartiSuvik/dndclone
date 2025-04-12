@@ -105,7 +105,7 @@ const ParagraphSection: React.FC = () => {
                         <span className="uppercase font-light block mb-3">Timeless Design</span>
                         <span className="normal-case text-lg sm:text-xl md:text-2xl text-[#9E7F43] font-light block mt-3" 
                               style={{ fontFamily: "'Cormorant Garamond', serif" }}>
-                            Rooted in Italian Craftsmanship
+                            Rooted in Luxury Italian interiors
                         </span>
                     </h2>
                 </motion.div>
@@ -120,12 +120,12 @@ const ParagraphSection: React.FC = () => {
                     className="pr-4 md:pr-10"
                 >
                     <div className="relative">
-                        <TextGenerateEffect 
-                            words={`At D&D, we believe true luxury lies in subtlety and detail.\n\nOur interiors reflect decades of Italian tradition, where each space is thoughtfully designed to bring beauty, function, and soul into everyday living.`}
-                            className="text-gray-700 text-base md:text-lg leading-relaxed font-light"
-                            duration={0.5}
-                            filter={false}
-                        />
+                    <TextGenerateEffect 
+                    words={`At D&D, we believe true luxury lies in subtlety and detail.\n\nOur luxury Italian interiors are thoughtfully crafted to reflect decades of heritage, combining elegance with comfort for modern living.\n\nEvery element is designed with purpose — timeless, refined, and deeply personal.`}
+                    className="text-gray-700 text-base md:text-lg leading-relaxed font-light"
+                    duration={0.5}
+                    filter={false}
+                  />
                         <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-radial from-[#C5A267]/10 to-transparent opacity-50"></div>
                     </div>
                 </motion.div>

@@ -14,7 +14,7 @@ const Sustainability = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Eco-Luxury & Sustainable Interior Design | D&D Design Center</title>
+        <title>Sustainable Interior Design | D&D Design Center</title>
         <meta name="description" content="Discover modern sustainable furniture, eco home furnishings, and sustainably sourced materials crafted for luxury interiors. Explore D&D’s energy-saving design journey." />
         <link rel="canonical" href="https://dnddesigncenter.com/sustainability" />
       </Helmet>

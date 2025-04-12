@@ -266,15 +266,15 @@ const VisionnaireIntroWithLoopingWords = () => {
             Redefining Luxury Living in New York
           </h3>
           <p
-            ref={paragraphRef}
-            className="text-base sm:text-lg text-gray-800 leading-relaxed font-light text-justify"
-          >
-            Our exclusive collaborations represent the pinnacle
-            of Italian craftsmanship and contemporary luxury interior design.
-            Each piece is a testament to our shared commitment to excellence,
-            blending traditional artisanal techniques with modern innovation to
-            redefine luxury living.
-          </p>
+  ref={paragraphRef}
+  className="text-base sm:text-lg text-gray-800 leading-relaxed font-light text-justify"
+>
+  We believe that true design excellence begins with creative collaborations. Our exclusive partnerships are more than product pairings — they are curated experiences born from shared values and artistic synergy.
+
+  <br /><br />
+
+  By collaborating with Italy’s most iconic luxury brands, we merge timeless craftsmanship with innovative vision. Each collection we present reflects a deep respect for tradition and a passion for redefining what’s next in interior design.
+</p>
 
           {/* Updated Button with inline logo */}
           <div className="pt-4">
@@ -283,9 +283,9 @@ const VisionnaireIntroWithLoopingWords = () => {
             href="/blog"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 sm:gap-4 px-6 sm:px-8 py-3 sm:py-4 bg-[#c5a267] text-white text-base sm:text-lg font-medium tracking-wider hover:bg-[#b49157] transition-all duration-200 group"
+            className="inline-flex items-center gap-3 sm:gap-4 px-6 sm:px-8 py-3 sm:py-4 bg-[#c5a267] text-white text-base sm:text-lg font-sans tracking-wider hover:bg-[#b49157] transition-all duration-200 group"
           >
-            Read Blog
+            Read Interior Insights
             <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
           </a>
           </div>

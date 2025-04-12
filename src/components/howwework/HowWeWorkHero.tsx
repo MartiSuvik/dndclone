@@ -79,10 +79,8 @@ const HowWeWorkHero = () => {
             >
               <span className="block">How We Work</span>
               <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl normal-case font-light mt-3">
-              OUR BESPOKE DESIGN PROCESS <br/>FOR ITALIAN INTERIORS IN NYC</span>
+               BESPOKE DESIGN PROCESS <br/>FOR ITALIAN INTERIORS IN NYC</span>
             </h1>
-
-
             <p
               ref={subtitleRef}
               className="text-white/90 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-shadow"

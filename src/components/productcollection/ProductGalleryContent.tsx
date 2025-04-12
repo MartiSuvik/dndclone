@@ -329,12 +329,11 @@ const ProductGalleryContent: React.FC = () => {
         {/* Category Selection */}
         <div className="mb-12 md:mb-24">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif text-[#1A1A1A] mb-2 md:mb-4">
+            <h2 className="text-4xl md:text-5xl font-serif text-[#1A1A1A] mb-2 md:mb-4">
               EXPLORE OUR PRODUCTS
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto italic">
-              by Designers that move outside the traditional boundaries.
-            </p>
+            <p className="text-gray-600 text-xl font-thin max-w-xl mx-auto">
+            Our collection includes handcrafted Italian furniture products for bedrooms, kitchens, living rooms, and beyond <br/>— each piece curated with timeless elegance in mind.</p>
           </div>
 
           {/* Mobile Tab Selector */}
