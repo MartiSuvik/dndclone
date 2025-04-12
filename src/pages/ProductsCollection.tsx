@@ -89,7 +89,7 @@ const ProductsCollection = () => {
         </div>
       )}
       <Helmet>
-        <title>Handcrafted Italian Luxury Furniture Collection | D&D Design Center</title>
+        <title>Custom Luxury Furniture Collection | D&D Design Center</title>
         <meta name="description" content="Explore our exclusive collection of luxury custom furniture at D&D Design Center." />
         <link rel="canonical" href="https://dnddesigncenter.com/productscollection" />
       </Helmet>

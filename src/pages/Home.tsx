@@ -13,7 +13,7 @@ function Home() {
   return (
     <div className="relative min-h-screen bg-white">
       <Helmet>
-        <title>Luxury Italian Interiors & Custom Furniture | D&D Design Center NYC</title>
+        <title>Luxury Interiors & Custom Furniture | D&D Design Center NYC</title>
         <meta
           name="description"
           content="Welcome to D&D Design Center. Discover our luxury custom furniture and crafted interiors."

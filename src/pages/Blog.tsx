@@ -13,7 +13,7 @@ const Blog = () => {
   return (
     <div className="relative min-h-screen bg-white">
       <Helmet>
-      <title>Luxury Interior Design Insights & Trends | D&D Design Center Blog</title>
+      <title>Interior Design Insights & Trends | D&D Design Center</title>
         <meta name="description" content="Read the latest news and updates from D&D Design Center on our blog." />
         <link rel="canonical" href="https://dnddesigncenter.com/blog" />
       </Helmet>

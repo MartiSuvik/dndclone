@@ -16,7 +16,7 @@ const Collaboration = () => {
   return (
     <div className="relative min-h-screen bg-white">
       <Helmet>
-        <title>Design Collaborations with Luxury Brands & Designers | D&D Design Center</title>
+        <title>Collaborations with Luxury Designers | D&D Design Center</title>
         <meta name="description" content="Learn about our collaborations with top designers and brands at D&D Design Center." />
         <link rel="canonical" href="https://dnddesigncenter.com/collaboration" />
       </Helmet>

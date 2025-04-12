@@ -73,24 +73,24 @@ const HowWeWorkHero = () => {
         <div className="container text-center mx-auto relative z-10 px-4">
           <div className="grid grid-cols-1 items-start gap-6 md:gap-12 py-12 md:items-end md:py-24 lg:gap-x-20 lg:py-28">
             <div className="mx-auto">
-              <h1
-                ref={titleRef}
-                className="mb-5 text-5xl sm:text-6xl md:text-8xl lg:text-10xl transform-gpu uppercase text-white/90 title-wrap"
-                style={{ perspective: "800px" }}
-              >
-                {/* Modified title layout with better mobile responsiveness */}
-                <div className="flex flex-col justify-center space-y-1 sm:space-y-2">
-                  <span className="block">HOW</span>
-                  <span className="block">WE WORK</span>
-                </div>
-              </h1>
-              <p
-                ref={subtitleRef}
-                className="text-white/90 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-shadow"
-                style={{ willChange: "transform, opacity, filter" }}
-              >
-                Our process of transforming spaces<br className="block sm:hidden" /><span className="whitespace-nowrap">through Italian craftsmanship. </span>
-              </p>
+            <h1
+              ref={titleRef}
+              className="mb-5 text-5xl sm:text-6xl md:text-8xl lg:text-10xl transform-gpu uppercase text-white/90 title-wrap"
+            >
+              <span className="block">How We Work</span>
+              <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl normal-case font-light mt-3">
+              OUR BESPOKE DESIGN PROCESS <br/>FOR ITALIAN INTERIORS IN NYC</span>
+            </h1>
+
+
+            <p
+              ref={subtitleRef}
+              className="text-white/90 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-shadow"
+              style={{ willChange: "transform, opacity, filter" }}
+            >
+              Full-service design process —<br className="block sm:hidden" />
+              from concept to installation.
+            </p>
             </div>
           </div>
         </div>

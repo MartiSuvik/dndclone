@@ -78,7 +78,12 @@ function FrameComponent({
               transition: "transform 0.3s ease-in-out",
             }}
           >
-            <img className="w-full h-full object-cover" src={image} alt="" />
+          <img
+            className="w-full h-full object-cover"
+            src={image}
+            alt={`${name} – ${description}`}
+            loading="lazy"
+          />
           </div>
         </div>
       </div>

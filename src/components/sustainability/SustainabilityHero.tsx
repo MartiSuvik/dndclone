@@ -73,25 +73,30 @@ const SustainabilityHero = () => {
         <div className="container text-center mx-auto relative z-10 px-4">
           <div className="grid grid-cols-1 items-start gap-6 md:gap-12 py-12 md:items-end md:py-24 lg:gap-x-20 lg:py-28">
             <div className="mx-auto">
-              <h1
-                ref={titleRef}
-                className="mb-5 text-5xl sm:text-6xl md:text-8xl lg:text-10xl transform-gpu uppercase text-white/90 title-wrap"
-                style={{ perspective: "800px" }}
-              >
-                {/* Modified title layout with better mobile responsiveness */}
-                <div className="flex flex-col justify-center space-y-1 sm:space-y-2">
-                  <span className="block">OUR</span>
-                  <span className="block">IMPACT</span>
-                  <span className="block">JOURNEY</span>
-                </div>
-              </h1>
-              <p
-                ref={subtitleRef}
-                className="text-white/90 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-shadow"
-                style={{ willChange: "transform, opacity, filter" }}
-              >
-                Designing a more beautiful planet, <br className="block sm:hidden" /><span className="whitespace-nowrap">one room at a time.</span>
-              </p>
+            <h1
+  ref={titleRef}
+  className="mb-5 text-5xl sm:text-6xl md:text-8xl lg:text-10xl transform-gpu uppercase text-white/90 title-wrap"
+  style={{ perspective: "800px" }}
+>
+  <span className="sr-only">
+    Our Sustainability Commitment – Eco-Friendly Interior Design with Italian Craftsmanship
+  </span>
+  <div aria-hidden="true" className="flex flex-col justify-center space-y-1 sm:space-y-2">
+    <span className="block">OUR</span>
+    <span className="block">SUSTAINABILITY</span>
+    <span className="block">COMMITMENT</span>
+  </div>
+</h1>
+
+<p
+  ref={subtitleRef}
+  className="text-white/90 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-shadow"
+  style={{ willChange: "transform, opacity, filter" }}
+>
+  Designing a more beautiful planet —<br className="block sm:hidden" />
+  with eco-friendly interiors made from sustainably sourced materials.
+</p>
+
             </div>
           </div>
         </div>

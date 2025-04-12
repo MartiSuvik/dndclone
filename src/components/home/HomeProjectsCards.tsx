@@ -257,12 +257,12 @@ const HomeProjectsCards = () => {
       className="relative min-h-screen bg-gray-50 py-12 md:py-20"
     >
       <div className="max-w-7xl mx-auto px-4 mb-2">
-        <h1 className="text-4xl sm:text-6xl md:text-8xl font-serif text-center">
+        <h2 className="text-4xl sm:text-6xl md:text-8xl font-serif text-center">
           PRODUCT COLLECTION
-        </h1>
+        </h2>
       </div>
       <div className="max-w-1xl mx-auto px-2">
-      <h1 className="text-lg sm:text-xl md:text-2xl font-sans text-[#B49157] text-center custom-pulse">
+      <h2 className="text-lg sm:text-xl md:text-2xl font-sans text-[#B49157] text-center custom-pulse">
   {displayLevel === "sub" && currentParentId
     ? mainCategories
         .find((cat) => cat.id === currentParentId)
@@ -270,7 +270,7 @@ const HomeProjectsCards = () => {
       ? "Pick a Room"
       : "Pick a Style"
     : "Click on the cards to get a quick glance"}
-</h1>
+</h2>
 </div>
 
 <div

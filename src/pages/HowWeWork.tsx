@@ -83,7 +83,7 @@ const HowWeWork = () => {
   return (
     <div className="min-h-screen bg-[#1A1A1A]">
       <Helmet>
-        <title>Our Curated Design Process for Luxury Homes | D&D Design Center</title>
+        <title>Our Design Process for Luxury Homes | D&D Design Center</title>
         <meta name="description" content="Learn about our process and how we create luxury custom furniture at D&D Design Center." />
         <link rel="canonical" href="https://dnddesigncenter.com/how-we-work" />
       </Helmet>

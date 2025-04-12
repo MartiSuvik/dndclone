@@ -78,9 +78,9 @@ const HomeHistorySection = () => {
   return (
     <section id="HomeHistorySection" ref={sectionRef} className="py-12 md:py-20 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 ref={titleRef} className="text-4xl sm:text-6xl md:text-8xl font-serif text-center mb-8 md:mb-16">
+        <h2 ref={titleRef} className="text-4xl sm:text-6xl md:text-8xl font-serif text-center mb-8 md:mb-16">
           OUR HISTORY
-        </h1>
+        </h2>
 
         <div className="relative">
           {/* Vertical timeline line - hidden on mobile, visible on larger screens */}

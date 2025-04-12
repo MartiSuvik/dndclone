@@ -80,12 +80,10 @@ const SustainabilityPath: React.FC = () => {
                   The Timeless Elegance of Woodcraft
                 </h2>
                 <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-light text-justify">
-                  Wood has long been a symbol of luxury, warmth, and durability. At the heart of our sustainable furniture design, 
-                  our skilled artisans meticulously select each piece for its unique grain, rich texture, and natural strength.  
-                  Every handcrafted creation tells a story—one of heritage, craftsmanship, and timeless elegance.
+                Wood has always stood as a symbol of warmth, heritage, and endurance. As part of our eco friendly home furniture promise, we source timbers that are both exquisite and ethically harvested. 
+                Each handcrafted piece tells a sustainability story—blending precision, natural materials, and artistry into lasting luxury. 
                   <br /><br />
-                  With precision and artistry, our experts transform raw materials into bespoke, one-of-a-kind pieces.  
-                  Each table, chair, or panel is sculpted with care, enhancing its organic beauty and refined character.  
+                  Our artisans work with intention, designing sustainably sourced furniture that’s both stunning and responsible.
                 </p>
             </div>
             <div className="order-1 lg:order-2">
@@ -106,14 +104,9 @@ const SustainabilityPath: React.FC = () => {
                   Upholstery - Where Luxury Meets Comfort
                 </h2>
                   <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-light text-justify">
-                    Upholstery is the soul of comfort in high-end furniture. Our master artisans bring  
-                    together the finest fabrics, leathers, and sustainable materials to craft seating that  
-                    is not only visually stunning but ergonomically designed for unparalleled comfort.
+                  Our master upholsterers craft with intention—pairing soft-touch, eco-certified textiles with luxurious comfort. The result? Sustainability products that blend tactile beauty with ergonomic performance. 
                     <br /><br />
-                    Every stitch, every seam, and every cushion is a testament to precision and expertise.  
-                    Whether it's a plush sofa, an elegant chaise, or a custom-designed headboard, our approach  
-                    blends luxury, durability, and eco-conscious innovation—creating pieces that elevate  
-                    interiors while ensuring sustainability.
+                    Every stitch honors our belief that environmental friendly products can also redefine elegance. With every chair and cushion, we prove that comfort and conscience go hand in hand.
                   </p>
             </div>
             <div className="lg:order-1">

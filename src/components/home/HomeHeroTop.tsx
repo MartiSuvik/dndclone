@@ -104,20 +104,17 @@ const HomeHeroTop = () => {
           {" "}
           <h1
             ref={titleRef}
-            className="mb-3 text-7xl sm:text-6xl md:text-8xl lg:text-10xl transform-gpu uppercase text-white/90"
+            className="mb-3 text-7xl sm:text-6xl md:text-8xl lg:text-10xl transform-gpu uppercase text-white/90 leading-tight"
             style={{ perspective: "800px" }}
           >
-            {" "}
-            <span className="title-word">Luxury </span>{" "}
-            <span className="title-word">Italian</span>{" "}
+            <span className="title-word block">Luxury <span className="inline">Italian</span></span>
+            <span
+              ref={craftedTitleRef}
+              className="block text-2xl sm:text-3xl md:text-4xl lg:text-6xl mt-2 crafted-shine text-shadow break-words text-balance"
+            >
+              Crafted Interiors for Modern Living
+            </span>
           </h1>
-          <h2
-            ref={craftedTitleRef}
-            className="mb-3 md:mb-5 text-2xl sm:text-3xl md:text-4xl lg:text-6xl uppercase crafted-shine text-shadow break-words text-balance"
-            style={{ opacity: 1 }}
-          >
-            Crafted Interiors for Modern Living
-          </h2>
           <p
             ref={subtitleRef}
             className="text-white/90 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-shadow"

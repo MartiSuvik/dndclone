@@ -73,24 +73,27 @@ const ProductCollectionHero = () => {
         <div className="container text-center mx-auto relative z-10 px-4">
           <div className="grid grid-cols-1 items-start gap-6 md:gap-12 py-12 md:items-end md:py-24 lg:gap-x-20 lg:py-28">
             <div className="mx-auto">
-              <h1
-                ref={titleRef}
-                className="mb-5 text-5xl sm:text-6xl md:text-8xl lg:text-10xl transform-gpu uppercase text-white/90 title-wrap"
-                style={{ perspective: "800px" }}
-              >
-                {/* Modified title layout with better mobile responsiveness */}
-                <div className="flex flex-col justify-center space-y-1 sm:space-y-2">
-                  <span className="block">PRODUCT</span>
-                  <span className="block">COLLECTION</span>
-                </div>
-              </h1>
-              <p
-                ref={subtitleRef}
-                className="text-white/90 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-shadow"
-                style={{ willChange: "transform, opacity, filter" }}
-              >
-                The contemporaneity and internationality <br className="block sm:hidden" /> of being <span className="whitespace-nowrap">"Made in Italy"</span>
-              </p>
+            <h1
+              ref={titleRef}
+              className="mb-5 text-5xl sm:text-6xl md:text-8xl lg:text-10xl transform-gpu uppercase text-white/90 title-wrap"
+              style={{ perspective: "800px" }}
+            >
+              <span className="sr-only">
+                Explore Our Luxury Italian Furniture Collection – Custom Pieces for Every Room
+              </span>
+              <div aria-hidden="true" className="flex flex-col justify-center space-y-1 sm:space-y-2">
+                <span className="block">Luxury Italian</span>
+                <span className="block">Product Collection</span>
+              </div>
+            </h1>
+            <p
+              ref={subtitleRef}
+              className="text-white/90 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-shadow"
+              style={{ willChange: "transform, opacity, filter" }}
+            >
+              Discover the elegance of contemporary, custom Italian furnishings —
+              <br className="block sm:hidden" />crafted for modern interiors.
+            </p>
             </div>
           </div>
         </div>
