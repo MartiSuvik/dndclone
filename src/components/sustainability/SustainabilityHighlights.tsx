@@ -111,7 +111,7 @@ const PillarCard: React.FC<PillarCardProps> = ({
         >
           <Icon className="w-12 h-12 sm:w-16 sm:h-16 text-[#4A6B47]" />
         </div>
-        <h3 className="text-lg sm:text-xl font-serif mb-3 sm:mb-4 text-[#2C3E2B] transform transition-all duration-300 group-hover:translate-y-[-5px]">
+        <h3 className="text-lg sm:text-xl font-sans mb-3 sm:mb-4 text-[#2C3E2B] transform transition-all duration-300 group-hover:translate-y-[-5px]">
           {title}
         </h3>
         <p className="text-sm sm:text-base text-gray-600 leading-relaxed transition-all duration-300 group-hover:text-gray-800">
@@ -158,7 +158,7 @@ const SustainabilityHighlights: React.FC<CallToActionProps> = ({  }) => {
       <PillarCard
         index={0}
         icon={Leaf}
-        title="Sustainable Sourcing"
+        title="Sustainably Sourced Furniture"
         description="Responsibly sourced materials from certified suppliers, ensuring environmental preservation"
       />
       <PillarCard
@@ -179,37 +179,31 @@ const SustainabilityHighlights: React.FC<CallToActionProps> = ({  }) => {
   <div className="max-w-lg text-center px-6 space-y-10">
     {/* 2. Responsible Sourcing */}
     <div className="space-y-3">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-[#3e533c]">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-sans text-[#3e533c]">
         Responsible Sourcing
       </h2>
       <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-light tracking-wide text-justify">
-        Through responsible sourcing, we select materials from certified suppliers who 
-        prioritize environmental preservation. This ensures that every component has 
-        minimal impact on ecosystems, preserving resources for future generations.
+      We partner with certified suppliers to deliver environmentally friendly products using responsibly harvested woods and ethical materials. Every handcrafted piece is rooted in sustainability—from source to installation.
       </p>
     </div>
 
     {/* 3. Zero-Waste Manufacturing */}
     <div className="space-y-3">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-[#3e533c]">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-sans text-[#3e533c]">
         Zero-Waste Manufacturing
       </h2>
       <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-light tracking-wide text-justify">
-        Our zero-waste manufacturing processes maximize resource efficiency by 
-        minimizing waste at every stage of production. This approach reduces 
-        our carbon footprint while maintaining exceptional craftsmanship.
+      Our approach maximizes efficiency while minimizing production waste. This energy-conscious model supports our mission of delivering sustainability products that honor both tradition and innovation.
       </p>
     </div>
 
     {/* 4. Circular Design */}
     <div className="space-y-3">
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-[#3e533c]">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-sans text-[#3e533c]">
         Circular Design
       </h2>
       <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed font-light tracking-wide text-justify">
-        With a focus on circular design, we create products that are built for longevity, 
-        repairability, and eventual recycling—ensuring a reduced environmental footprint 
-        without compromising on elegance or comfort.
+      Our collections reflect a commitment to modern sustainable furniture. Each product is made to last—repurposable, recyclable, and rooted in low-impact production cycles.
       </p>
     </div>
 {/* CTA Buttons */}
@@ -224,7 +218,7 @@ const SustainabilityHighlights: React.FC<CallToActionProps> = ({  }) => {
               to="/productscollection"
               className="w-auto inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#C5A267] text-white font-medium rounded-sm hover:bg-[#D6B378] transition-colors duration-300 group min-h-[44px]"
             >
-              VIEW COLLECTIONS
+              VIEW SUSTAINABLE COLLECTIONS
               <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </div>

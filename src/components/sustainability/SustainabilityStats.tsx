@@ -192,6 +192,11 @@ const SustainabilityStats: React.FC = () => {
             label="Liters of Water Conserved"
             index={2}
           />
+          <p className="col-span-1 sm:col-span-2 md:col-span-3 text-center text-lg sm:text-xl font-thin text-gray-700 mt-8 pl-32 pr-32">
+            Our commitment to sustainability is not just a trend; it's a core value that drives our design philosophy.
+            <br />
+            We believe in creating spaces that are not only beautiful but also environmentally responsible.
+          </p>
         </div>
       </div>
     </section>

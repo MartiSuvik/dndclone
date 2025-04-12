@@ -119,7 +119,7 @@ const SustainabilityShowcase: React.FC = () => {
           {/* The image */}
           <img
             ref={imageRef}
-            src="https://res.cloudinary.com/designcenter/image/upload/Home/Product_2/Kitchen/Modern/Kitchen_Modern_3.avif"
+            src="https://res.cloudinary.com/designcenter/image/upload/Product_2/Kitchen/Modern/Kitchen_Modern_3.avif"
             alt="Sustainable Design"
             className="w-full h-auto object-cover"
             loading="lazy"
@@ -170,9 +170,8 @@ const SustainabilityShowcase: React.FC = () => {
         </div>
         
         {/* Caption */}
-        <p className="text-sm text-gray-600 mt-4 text-center">
-          Our sustainable design approach focuses on environmentally responsible materials and construction methods.
-        </p>
+        <p className="text-xl text-gray-600 mt-4 text-center font-thin">
+        Our curated interiors showcase eco home furnishings and materials selected for their <br /> durability, recyclability, and low environmental impact.        </p>
       </div>
 
       {/* Add pulse animation CSS */}

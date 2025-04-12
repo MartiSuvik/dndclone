@@ -90,7 +90,7 @@ const SustainabilityHero = () => {
                 className="text-white/90 text-sm sm:text-base md:text-xl lg:text-2xl font-light text-shadow"
                 style={{ willChange: "transform, opacity, filter" }}
               >
-                The path to reduce <br className="block sm:hidden" /><span className="whitespace-nowrap">the environmental footprint</span>
+                Designing a more beautiful planet, <br className="block sm:hidden" /><span className="whitespace-nowrap">one room at a time.</span>
               </p>
             </div>
           </div>
