@@ -32,3 +32,4 @@ http://www.dnddesigncenter.com/*  http://dnddesigncenter.com/:splat  301!
 
 # 5. Catch-all for your SPA
 /*  /index.html  200
+/admin  /admin/index.html  200
