@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="seobility" content="944c7b2fc816ec250035cbbdc228386a">
+    <meta name="p:domain_verify" content="1b5b13366a4ef9f63076fb7861931423"/>
+    <script async="async" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HL2DXBM443"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HL2DXBM443');
+  </script>
+    <link rel="icon" type="image/avif" href="https://res.cloudinary.com/designcenter/image/upload/Favicon_DnD.avif" />
+    <link rel="apple-touch-icon" href="https://res.cloudinary.com/designcenter/image/upload/Favicon_DnD.avif" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D&D</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script type="text/javascript">
+      let voiceflowLoaded = false;
+
+      function loadVoiceflow() {
+        if (!voiceflowLoaded) {
+          let v = document.createElement("script");
+          v.onload = function () {
+            window.voiceflow.chat.load({
+              verify: { projectID: "67cbedb6307e530c4939188b" },
+              url: "https://general-runtime.voiceflow.com",
+              versionID: "production",
+              voice: {
+                url: "https://runtime-api.voiceflow.com"
+              }
+            });
+          };
+          v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+          v.type = "text/javascript";
+          document.body.appendChild(v);
+          voiceflowLoaded = true;
+        }
+      }
+
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+          loadVoiceflow();
+        }
+      });
+
+      document.addEventListener("click", function () {
+        loadVoiceflow();
+      }, { once: true });
+    </script>
+  </body>
+</html>

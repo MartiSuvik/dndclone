@@ -1,0 +1,28 @@
+{
+    "id": "designer1",
+    "name": "Anastasia Kasparyan",
+    "title": "Interior Designer",
+    "bio": "Kaspary Interiors is the international Architecture & Design Studio with headquarters in Moscow & Miami. We pride ourselves on having been creating exclusive premium interiors around the world for more than 15 years. Thanks to efficiently managed according to international service quality standards working processes, as well as successful collaborations with major brands in the high-quality industry and fine craftmanship in EU and Asia, our team provides and implements complex design projects, from the concept development to the final realization and photo sessions for international media. A unique combination of an innovative approach to work and respect for European architecture & design traditions is a hallmark of our brand that helps us build long-term trusting relationships with our customers.",
+    "photo": "https://res.cloudinary.com/designcenter/image/upload/Designer_1.avif",
+    "website": "https://kasparyinteriors.com/?fbclid=PAZXh0bgNhZW0CMTEAAafHbGESk5BB0mdJyEiBn0rtvLSN8vw_vigU0qshpIbaEDgkTkSS2kUkJEMZ3A_aem_hL0-v6_zMeonU0dsxt8KYg",
+    "featuredWorks": [
+      {
+        "id": 1,
+        "image": "https://res.cloudinary.com/designcenter/image/upload/2_s3feha.avif",
+        "alt": "Luxury living room with modern furniture",
+        "link": "https://www.instagram.com/reel/DHZW8XDv6J_/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      {
+        "id": 2,
+        "image": "https://res.cloudinary.com/designcenter/image/upload/3_yzmlyy.avif",
+        "alt": "Elegant bedroom design with neutral tones",
+        "link": "https://www.instagram.com/reel/DIt1mS7R52R/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      {
+        "id": 3,
+        "image": "https://res.cloudinary.com/designcenter/image/upload/1_dfqr9s.avif",
+        "alt": "Minimalist kitchen with marble countertops",
+        "link": "https://www.instagram.com/reel/DHJ3yHitmZA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      }
+    ]
+  }

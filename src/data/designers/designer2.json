@@ -1,0 +1,28 @@
+{
+    "id": "designer2",
+    "name": "Francis Toumbakaris",
+    "title": "Interior Designer",
+    "bio": "Welcome to the world of Francis Interiors, where we create impactful environments that carry the essence of the humans living there. In our work you will find balance, contrast, and movement. Evolving from a general contracting background, Francis Interiors seamlessly integrates design and project management under one roof. With years of experience managing complex, multimillion dollar projects, our studio has emerged as one of the most versatile on the East Coast and beyond. Our innovative approach often turns challenges into opportunities, significantly enhancing property value. Toumbakaris and his team bring unparalleled passion and enthusiasm to every project, leaving a lasting impact on all involved.",
+    "photo": "https://res.cloudinary.com/designcenter/image/upload/Designer_2.avif",
+    "website": "https://www.francisinteriors.com/",
+    "featuredWorks": [
+      {
+        "id": 1,
+        "image": "https://res.cloudinary.com/designcenter/image/upload/3_gjryh9.avif",
+        "alt": "Contemporary dining room with pendant lighting",
+        "link": "https://www.instagram.com/"
+      },
+      {
+        "id": 2,
+        "image": "https://res.cloudinary.com/designcenter/image/upload/1_sf7cj7.avif",
+        "alt": "Modern bathroom with freestanding tub",
+        "link": "https://www.instagram.com/"
+      },
+      {
+        "id": 3,
+        "image": "https://res.cloudinary.com/designcenter/image/upload/2_mkj6rf.avif",
+        "alt": "Luxury home office with custom built-ins",
+        "link": "https://www.instagram.com/"
+      }
+    ]
+  }

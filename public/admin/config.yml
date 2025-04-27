@@ -1,0 +1,103 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where Netlify CMS looks for uploads by default (not used with Cloudinary)
+media_folder: "static/uploads"
+# How those in‑repo uploads would be referenced (also not used here)
+public_folder: "/uploads"
+
+# ← Add this block to enable Cloudinary uploads
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: designcenter
+    api_key: 731759592841628
+    upload_preset: Photo_1
+
+collections:
+  # BLOG (Markdown)
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "cover", label: "Cover Image", widget: "image" }
+      - { name: "body", label: "Body", widget: "markdown" }
+
+  # PROJECTS (Transformations Page)
+  - name: "projects"
+    label: "Projects"
+    folder: "src/data/projects"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { name: "slug",        label: "Slug",        widget: "string" }
+      - { name: "title",       label: "Title",       widget: "string" }
+      - { name: "description", label: "Description", widget: "text" }
+      - name: "images"
+        label: "Images"
+        widget: "list"
+        fields:
+          - { name: "url",   label: "Image URL",   widget: "image" }
+
+  # TESTIMONIALS (How We Work Page)
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "src/data/testimonials"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { name: "slug",   label: "Slug",   widget: "string" }
+      - { name: "name",   label: "Name",   widget: "string" }
+      - { name: "quote",  label: "Quote",  widget: "text" }
+      - { name: "rating", label: "Rating", widget: "string" }
+
+  # BRANDS (Collaborations Page)
+  - name: "brands"
+    label: "Brands"
+    folder: "src/data/brands"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { name: "slug",        label: "Slug",        widget: "string" }
+      - { name: "name",        label: "Name",        widget: "string" }
+      - name: "logo"
+        label: "Logo"
+        widget: "image"
+        media_library:
+          config:
+            folder: "Navbar_7/Logos_For_Navbar"
+      - { name: "website",     label: "Website URL", widget: "string" }
+      - { name: "description", label: "Description", widget: "text"   }
+
+  # DESIGNERS (Designers Page)
+  - name: "designers"
+    label: "Designers"
+    folder: "src/data/designers"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { name: "slug",    label: "Slug",    widget: "string" }
+      - { name: "id",      label: "ID",      widget: "string" }
+      - { name: "name",    label: "Name",    widget: "string" }
+      - { name: "title",   label: "Title",   widget: "string" }
+      - { name: "bio",     label: "Bio",     widget: "text"   }
+      - { name: "photo",   label: "Photo",   widget: "image"  }
+      - { name: "website", label: "Website", widget: "string" }
+      - name: "featuredWorks"
+        label: "Featured Works"
+        widget: "list"
+        fields:
+          - { name: "id",    label: "ID",    widget: "number" }
+          - { name: "image", label: "Image", widget: "image" }
+          - { name: "alt",   label: "Alt",   widget: "string" }
+          - { name: "link",  label: "Link",  widget: "string" }
