@@ -1,12 +1,12 @@
 ---
-title: "10 Myths About Interior Designers Debunked"
+title: "10 Interior Designers Myths Debunked"
 excerpt: "Discover what interior designers really do—beyond decor."
 category: "Craftsmanship"
 date: "2025-04-19"
 readTime: 6
 image:
   url: "https://res.cloudinary.com/designcenter/image/upload/v1744033499/Product_2/Light/Light_76.avif"
-  alt: ""
+  alt: "Here you'll find what interior designers do, so you make the best investment for your home"
 ---
 
 # Debunking 10 Myths: What Interior Designers Actually Do?

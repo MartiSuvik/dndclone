@@ -1,12 +1,12 @@
 ---
-title: "Why Clients Hire Home Designers with Confidence"
+title: "Why Clients Hire Home Designers?"
 excerpt: "How hiring a designer saves you time and avoids mistakes?"
 category: "Design"
 date: "2025-04-15"
 readTime: 5
 image:
   url: "https://res.cloudinary.com/designcenter/image/upload/How_We_Design_Your_Luxury_Interior.avif"
-  alt: ""
+  alt: "Why you should hire a interior designer, and how it helps"
 video:
   name: "Luxury Closet Transformation – Closet Project"
   description: "How we turned a closet into a luxurious daily ritual space for one NYC client."

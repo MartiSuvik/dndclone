@@ -14,7 +14,7 @@ const ProductsCollection = lazy(() => import('./pages/ProductsCollection'));
 const Collaboration = lazy(() => import('./pages/collaboration'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPostPage = lazy(() => import('./components/blog/BlogPostPage'));
-const Designers = lazy(() => import('./pages/Designers')); // Add the new Designers page
+const Designers = lazy(() => import('./pages/Designers'));
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
