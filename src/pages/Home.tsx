@@ -8,6 +8,7 @@ import HomeHeroBottom from "../components/home/HomeHeroBottom";
 import VisionnaireSection from "../components/home/VisionnaireSection";
 import SustainabilitySection from "../components/home/SustainabilitySection";
 import TextGenerateEffect from "../components/home/ParagraphSection";
+import { Feature197 } from '../components/ui/accordion-feature-section';
 
 function Home() {
   return (
@@ -46,6 +47,7 @@ function Home() {
         <HomeHeroTop />
         <TextGenerateEffect/>
         <HomeProjectsCards />
+        <Feature197 />
         <HomeCollections />
         <HomeHowWeWork />
         <SustainabilitySection />

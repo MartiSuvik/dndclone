@@ -25,55 +25,55 @@ const defaultFeatures: FeatureItem[] = [
       id: 1,
       title: "Kitchen",
       image: "https://res.cloudinary.com/designcenter/image/upload/Luxury%20Kitchen%20Interiors%20%E2%80%93%20Custom%20Cabinetry%20and%20Marble%20Finishes.avif",
-      description: "Elevate your kitchen with **bespoke Italian craftsmanship** and full-service kitchen redesign in New York. From contemporary luxury kitchens to integrated kitchen and bath renovations, our design studio crafts tailored spaces that reflect your culinary lifestyle and architectural taste.\n\nWe specialize in custom installations, premium materials, and layout transformations—delivering kitchens that combine **modern elegance with lasting function**. Serving NYC clients seeking a high-end kitchen design experience from consultation to completion."
+      description: "We begin by discussing your culinary habits, lifestyle, and aesthetic goals during a personalized consultation. Our design team then creates a fully customized kitchen layout, focusing on functionality, flow, and visual harmony. We source Italian-made cabinetry, marble surfaces, and premium appliances, ensuring every material aligns with your taste and daily use. Throughout production, we coordinate with artisans and manufacturers in Italy, overseeing quality control and timelines. Our team manages delivery, installation, and final detailing to ensure your kitchen becomes a refined centerpiece of your home."
     },
     {
       id: 2,
       title: "Living Room",
       image: "https://res.cloudinary.com/designcenter/image/upload/Luxury%20Living%20Room%20Design%20%E2%80%93%20Custom%20Sofas%20and%20Decor%20NYC.avif",
-      description: "Transform your living room interior with **custom Italian design**, crafted to elevate everyday comfort and style. Whether you need a luxury sofa for your Manhattan loft or a refined open-plan layout for your Brooklyn brownstone, our team specializes in high-end living room remodels that reflect your taste and lifestyle.\n\nFrom living room layout consultation to bespoke cabinetry and lighting, our NYC interior designers create **cohesive, functional, and stunning living spaces** tailored to you."
+      description: "We start by understanding how you live and entertain—whether you host frequent gatherings or prefer serene, intimate spaces. After establishing your design vision, we curate a bespoke layout that balances comfort and artistry, specifying custom Italian sofas, built-in cabinetry, and lighting tailored to your lifestyle. We create detailed floor plans and mood boards, source every piece directly from our trusted suppliers, and supervise each phase of delivery and installation to ensure your living room embodies both luxurious relaxation and timeless design integrity."
     },
     {
       id: 3,
       title: "Dining Room",
       image: "https://res.cloudinary.com/designcenter/image/upload/Luxury%20Dining%20Room%20Furniture%20%E2%80%93%20Custom%20Tables%20and%20Seating.avif",
-      description: "Discover our **modern dining room design gallery**, featuring fully styled interiors that blend Italian craftsmanship with NYC sophistication. From minimalist dining setups to elegant open-plan concepts, our portfolio includes contemporary dining room decor and stylish dining room ideas tailored to high-end Manhattan and Brooklyn residences.\n\nWhether you're seeking modern dining room images for inspiration or full-service design consultation, we turn your dining space into a **visual and functional centerpiece**."
+      description: "We first explore how you envision dining experiences in your home—whether formal, casual, or a seamless extension of your living area. Our team designs a tailored dining environment around your needs, recommending custom Italian tables, handcrafted seating, and lighting that sets the perfect ambiance. We oversee every element, from proportion and material selection to installation and styling, ensuring your dining room becomes a sophisticated space for memorable gatherings and daily enjoyment."
     },
     {
       id: 4,
       title: "Bedroom",
       image: "https://res.cloudinary.com/designcenter/image/upload/Custom%20Luxury%20Bedroom%20Design%20%E2%80%93%20High-End%20Interiors%20NYC.avif",
-      description: "Indulge in **custom bedroom design in New York** with interiors crafted for elegance, comfort, and timeless sophistication. At D&D Design Center, we curate bespoke bedroom suites featuring Italian-made furnishings, modern aesthetics, and personalized layouts.\n\nWhether it's a master suite in Manhattan or a refined guest room in Brooklyn, our luxury bedroom designs elevate daily rituals into restful experiences. From concept to installation, we deliver **full-service design** that reflects your unique style and the serenity of true craftsmanship."
+      description: "We begin with an in-depth consultation to understand your rituals of rest, relaxation, and personal style. Our designers then craft a layout centered on tranquility and elegance, recommending bespoke Italian beds, custom wardrobes, and integrated lighting solutions. Each element is sourced from our network of master artisans, with full project management to ensure seamless delivery and meticulous installation. The result is a bedroom sanctuary that blends comfort, sophistication, and personal storytelling."
     },
     {
       id: 6,
       title: "Bathroom",
       image: "https://res.cloudinary.com/designcenter/image/upload/Luxury%20Bathroom%20Design%20%E2%80%93%20Bespoke%20Vanities%20and%20Interiors.avif",
-      description: "Transform your bathroom design in New York with **bespoke vanities, luxury fixtures, and handcrafted surfaces** made for timeless sophistication. Our NYC clients choose us for our Italian-designed bathrooms that balance serenity and style, from spa-inspired layouts to bold, modern expressions.\n\nWhether you're renovating a Manhattan condo or building your dream bathroom in Brooklyn, we deliver **high-end design solutions** that reflect your taste and elevate everyday routines. Discover why bathroom design NYC is evolving with custom artistry and refined materials."
+      description: "We start by identifying how you want your bathroom to feel—spa-like, sleek, dramatic, or timeless. After gathering inspiration and spatial measurements, we design a bespoke bathroom plan using custom vanities, Italian stone surfaces, premium fixtures, and tailored storage solutions. Throughout production, we maintain rigorous quality checks and timeline management, coordinating with our artisans to ensure flawless finishes. Installation is overseen directly by our project managers, guaranteeing a result that turns daily rituals into indulgent experiences."
     },
     {
       id: 8,
       title: "Office",
       image: "https://res.cloudinary.com/designcenter/image/upload/Bespoke%20Office%20Furniture%20%E2%80%93%20Luxury%20Workspaces%20NYC.avif",
-      description: "Design your ideal office in New York with our collection of **custom Italian furniture** tailored for workspaces that blend sophistication with performance. Whether you're building a luxury home office in Brooklyn or curating a high-end executive suite in Manhattan, our handcrafted desks, cabinetry, and seating deliver both style and productivity.\n\nWith premium materials and **bespoke craftsmanship**, every piece reflects the elegance expected by New York professionals. Explore our office furniture collections designed for modern living and refined tastes."
+      description: "We tailor your home office based on your work habits, creative needs, and design preferences. Beginning with a consultation, we create a custom space plan featuring Italian desks, ergonomic seating, integrated storage, and ambient lighting for productivity and refinement. Our team handles every detail, from selecting handcrafted materials to coordinating fabrication and delivery schedules, culminating in an office space that enhances focus and embodies effortless sophistication."
     },
     {
       id: 9,
       title: "Closet",
       image: "https://res.cloudinary.com/designcenter/image/upload/Closet_Designed_For_Modern_Homes.avif",
-      description: "Create your dream closet in New York with **custom Italian craftsmanship** tailored to your lifestyle. Whether you're upgrading to a walk-in closet in a Manhattan penthouse or refining your Brooklyn brownstone wardrobe, we specialize in bespoke closet systems designed for luxury, function, and elegance.\n\nOur closet designers in NYC use only the finest materials to craft **personalized storage solutions** that elevate your everyday routine. Discover why custom closet design in NYC starts with timeless aesthetics and tailored perfection."
+      description: "We start by mapping your wardrobe habits—whether you need expansive walk-in solutions or elegantly hidden storage. Our designers create customized layouts using modular Italian systems, emphasizing aesthetic clarity and functional organization. Materials are carefully selected for durability and beauty, with options for integrated lighting and luxurious hardware. We manage the entire fabrication and installation process, delivering closets that feel as curated and personal as a designer boutique."
     },
     {
       id: 5,
       title: "Light",
       image: "https://res.cloudinary.com/designcenter/image/upload/Luxury%20Lighting%20Design%20%E2%80%93%20Modern%20Fixtures%20for%20High-End%20Homes.avif",
-      description: "Illuminate your home with **expert lighting design in New York**, featuring curated fixtures from Italy's most revered design houses. Our luxury lighting collection blends architectural form and functional brilliance—ideal for Manhattan penthouses, Brooklyn brownstones, and modern lofts alike.\n\nWhether you're sourcing a designer chandelier or planning a full lighting redesign with our specialists, we deliver **elegance, efficiency, and atmosphere**. Explore bespoke lighting NYC clients trust for high-end interiors that shine with personality."
+      description: "We collaborate with you to understand the emotional tone and architectural needs of each space before designing a layered lighting plan. Our specialists source Italian-made chandeliers, sconces, and recessed lighting systems that blend artistry and functionality. We provide detailed lighting schematics and coordinate installation with our trusted electricians, ensuring your home radiates atmosphere, elegance, and warmth at every hour."
     },
     {
       id: 7,
       title: "Outdoor",
       image: "https://res.cloudinary.com/designcenter/image/upload/Luxury%20Outdoor%20Furniture%20%E2%80%93%20Custom%20Patio%20and%20Terrace%20Designs.avif",
-      description: "Bring your terrace to life with **luxury outdoor furniture** and terrace design in New York tailored to your lifestyle. Whether it's a rooftop retreat in Manhattan or a balcony oasis in Brooklyn, we craft bespoke outdoor spaces with Italian-made pieces and refined materials.\n\nFrom custom seating and planters to architectural layouts, our NYC terrace design solutions combine **elegance, comfort, and functionality** for year-round enjoyment. Explore outdoor living elevated by craftsmanship and style."
+      description: "We begin by assessing your outdoor lifestyle—whether it’s hosting rooftop dinners or creating a private terrace retreat. Our team designs layouts that maximize space and visual connection to your interiors, specifying Italian outdoor furniture, weather-resistant materials, and customized planters. From furniture sourcing to architectural layout adjustments, we oversee every detail, delivering outdoor living spaces that feel like a natural extension of your luxurious indoor world."
     },
   ];  
   
@@ -137,7 +137,7 @@ const Feature197 = ({ features = defaultFeatures }: Feature197Props) => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 leading-relaxed">
-            Custom Luxury Furniture for Every Room in Your NYC Home
+        Discover How We Transform NYC Homes with Custom Luxury Interiors
             </h2>
             <p className="mt-4 text-m text-gray-600 max-w-1xl mx-auto leading-relaxed">
             From kitchens to closets, discover how D&D Design Center transforms each space with bespoke Italian craftsmanship and tailored elegance for modern New York living.
@@ -154,12 +154,13 @@ const Feature197 = ({ features = defaultFeatures }: Feature197Props) => {
                       setActiveTabId(tab.id);
                     }}
                     className="cursor-pointer py-5 !no-underline transition"
+                    aria-expanded={tab.id === activeTabId}
                   >
-                    <h6
+                    <h3
                       className={`text-xl font-serif ${tab.id === activeTabId ? "text-[#C5A267]" : "text-gray-600"}`}
                     >
                       {tab.title}
-                    </h6>
+                    </h3>
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="space-y-1 text-justify leading-relaxed">
@@ -203,73 +204,4 @@ const Feature197 = ({ features = defaultFeatures }: Feature197Props) => {
   );
 };
 
-const demoData = {
-    features: [
-        {
-            id: 1,
-            title: "KITCHEN",
-            image: "https://res.cloudinary.com/designcenter/image/upload/Luxury%20Kitchen%20Interiors%20%E2%80%93%20Custom%20Cabinetry%20and%20Marble%20Finishes.avif",
-            description: "Elevate your kitchen with **bespoke Italian craftsmanship** and full-service kitchen redesign in New York. From contemporary luxury kitchens to integrated kitchen and bath renovations, our design studio crafts tailored spaces that reflect your culinary lifestyle and architectural taste.\n\nWe specialize in custom installations, premium materials, and layout transformations—delivering kitchens that combine **modern elegance with lasting function**. Serving NYC clients seeking a high-end kitchen design experience from consultation to completion."
-        },
-          {
-            id: 2,
-            title: "LIVING ROOM",
-            image: "https://res.cloudinary.com/designcenter/image/upload/Luxury%20Living%20Room%20Design%20%E2%80%93%20Custom%20Sofas%20and%20Decor%20NYC.avif",
-            description: "Transform your living room interior with **custom Italian design**, crafted to elevate everyday comfort and style. Whether you need a luxury sofa for your Manhattan loft or a refined open-plan layout for your Brooklyn brownstone, our team specializes in high-end living room remodels that reflect your taste and lifestyle.\n\nFrom living room layout consultation to bespoke cabinetry and lighting, our NYC interior designers create **cohesive, functional, and stunning living spaces** tailored to you."
-        },
-          {
-            id: 3,
-            title: "DINING ROOM",
-            image: "https://res.cloudinary.com/designcenter/image/upload/Luxury%20Dining%20Room%20Furniture%20%E2%80%93%20Custom%20Tables%20and%20Seating.avif",
-            description: "Discover our **modern dining room design gallery**, featuring fully styled interiors that blend Italian craftsmanship with NYC sophistication. From minimalist dining setups to elegant open-plan concepts, our portfolio includes contemporary dining room decor and stylish dining room ideas tailored to high-end Manhattan and Brooklyn residences.\n\nWhether you're seeking modern dining room images for inspiration or full-service design consultation, we turn your dining space into a **visual and functional centerpiece**."
-        },
-          {
-            id: 4,
-            title: "BEDROOM",
-            image: "https://res.cloudinary.com/designcenter/image/upload/Custom%20Luxury%20Bedroom%20Design%20%E2%80%93%20High-End%20Interiors%20NYC.avif",
-            description: "Indulge in **custom bedroom design in New York** with interiors crafted for elegance, comfort, and timeless sophistication. At D&D Design Center, we curate bespoke bedroom suites featuring Italian-made furnishings, modern aesthetics, and personalized layouts.\n\nWhether it's a master suite in Manhattan or a refined guest room in Brooklyn, our luxury bedroom designs elevate daily rituals into restful experiences. From concept to installation, we deliver **full-service design** that reflects your unique style and the serenity of true craftsmanship."
-        },
-          {
-            id: 6,
-            title: "BATHROOM",
-            image: "https://res.cloudinary.com/designcenter/image/upload/Luxury%20Bathroom%20Design%20%E2%80%93%20Bespoke%20Vanities%20and%20Interiors.avif",
-            description: "Transform your bathroom design in New York with **bespoke vanities, luxury fixtures, and handcrafted surfaces** made for timeless sophistication. Our NYC clients choose us for our Italian-designed bathrooms that balance serenity and style, from spa-inspired layouts to bold, modern expressions.\n\nWhether you're renovating a Manhattan condo or building your dream bathroom in Brooklyn, we deliver **high-end design solutions** that reflect your taste and elevate everyday routines. Discover why bathroom design NYC is evolving with custom artistry and refined materials."
-        },
-          {
-            id: 8,
-            title: "OFFICE",
-            image: "https://res.cloudinary.com/designcenter/image/upload/Bespoke%20Office%20Furniture%20%E2%80%93%20Luxury%20Workspaces%20NYC.avif",
-            description: "Design your ideal office in New York with our collection of **custom Italian furniture** tailored for workspaces that blend sophistication with performance. Whether you're building a luxury home office in Brooklyn or curating a high-end executive suite in Manhattan, our handcrafted desks, cabinetry, and seating deliver both style and productivity.\n\nWith premium materials and **bespoke craftsmanship**, every piece reflects the elegance expected by New York professionals. Explore our office furniture collections designed for modern living and refined tastes."
-        },
-          {
-            id: 9,
-            title: "CLOSET",
-            image: "https://res.cloudinary.com/designcenter/image/upload/Closet_Designed_For_Modern_Homes.avif",
-            description: "Create your dream closet in New York with **custom Italian craftsmanship** tailored to your lifestyle. Whether you're upgrading to a walk-in closet in a Manhattan penthouse or refining your Brooklyn brownstone wardrobe, we specialize in bespoke closet systems designed for luxury, function, and elegance.\n\nOur closet designers in NYC use only the finest materials to craft **personalized storage solutions** that elevate your everyday routine. Discover why custom closet design in NYC starts with timeless aesthetics and tailored perfection."
-        },
-          {
-            id: 5,
-            title: "LIGHTS",
-            image: "https://res.cloudinary.com/designcenter/image/upload/Luxury%20Lighting%20Design%20%E2%80%93%20Modern%20Fixtures%20for%20High-End%20Homes.avif",
-            description: "Illuminate your home with **expert lighting design in New York**, featuring curated fixtures from Italy's most revered design houses. Our luxury lighting collection blends architectural form and functional brilliance—ideal for Manhattan penthouses, Brooklyn brownstones, and modern lofts alike.\n\nWhether you're sourcing a designer chandelier or planning a full lighting redesign with our specialists, we deliver **elegance, efficiency, and atmosphere**. Explore bespoke lighting NYC clients trust for high-end interiors that shine with personality."
-        },
-          {
-            id: 7,
-            title: "OUTDOOR",
-            image: "https://res.cloudinary.com/designcenter/image/upload/Luxury%20Outdoor%20Furniture%20%E2%80%93%20Custom%20Patio%20and%20Terrace%20Designs.avif",
-            description: "Bring your terrace to life with **luxury outdoor furniture** and terrace design in New York tailored to your lifestyle. Whether it's a rooftop retreat in Manhattan or a balcony oasis in Brooklyn, we craft bespoke outdoor spaces with Italian-made pieces and refined materials.\n\nFrom custom seating and planters to architectural layouts, our NYC terrace design solutions combine **elegance, comfort, and functionality** for year-round enjoyment. Explore outdoor living elevated by craftsmanship and style."
-        },
-    ],
-  };
-
-function Feature197Demo() {
-  // Example implementation with a mock trigger function
-  const demoTriggerFooterContact = () => {
-    alert("Contact form would appear here in the real implementation");
-    // In real implementation, this would scroll to or open the contact form
-  };
-
-  return <Feature197 {...demoData} triggerFooterContact={demoTriggerFooterContact} />;
-}
-
-export { Feature197, Feature197Demo };
+export { Feature197 };

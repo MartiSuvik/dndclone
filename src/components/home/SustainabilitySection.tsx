@@ -205,32 +205,36 @@ const SustainabilitySection = () => {
           </h2>
           
           <p 
-            ref={descriptionRef}
-            className="text-lg md:text-xl text-white/80 font-light tracking-wide"
-          >
-            Our commitment to eco-conscious luxury design.
-          </p>
+                ref={descriptionRef}
+                className="text-lg md:text-xl text-white/80 font-light tracking-wide mb-6"
+              >
+                Our commitment to eco-conscious luxury design.
+              </p>
+
+              <p className="text-base md:text-lg text-white/70 font-light tracking-wide max-w-xl mx-auto mb-10">
+                At D&D Design Center, we pioneer <strong>sustainable luxury interiors</strong> by crafting <strong>eco-friendly furniture</strong> that blends timeless artistry with responsible materials. Our bespoke collections prioritize ethical sourcing, energy-efficient production, and minimizing environmental impact without compromising on style or sophistication.
+              </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mb-12 md:mb-24">
           <SustainabilityFeature 
             icon={<Leaf className="w-6 h-6 md:w-8 md:h-8" />}
             title="ECO-FRIENDLY"
-            description="We minimize environmental impact while maintaining the highest standards of quality."
+            description="We minimize environmental impact while maintaining the highest standards of quality, ensuring every piece supports a greener future for luxury living."
             delay={0.3}
           />
           
           <SustainabilityFeature 
             icon={<Zap className="w-6 h-6 md:w-8 md:h-8" />}
             title="EFFICIENT"
-            description="We follow energy-saving principles that reduce consumption without sacrificing aesthetics."
+            description="Our sustainable furniture production follows energy-saving principles, reducing waste and optimizing resources for eco-friendly interiors that inspire mindful living."
             delay={0.6}
           />
           
           <SustainabilityFeature 
             icon={<Hammer className="w-6 h-6 md:w-8 md:h-8" />}
             title="ETHICAL"
-            description="We partner with artisans who share traditional craftsmanship that stands the test of time."
+            description="We collaborate with artisans who embrace ethical craftsmanship, using responsibly sourced materials to create luxurious designs that stand the test of time."
             delay={0.9}
           />
         </div>
@@ -239,7 +243,7 @@ const SustainabilitySection = () => {
           <Link 
             to="/sustainability"
             ref={ctaRef}
-            className="inline-flex items-center gap-2 px-6 py-4 bg-[#C5A267] text-black font-medium rounded-sm hover:bg-[#D6B378] transition-colors duration-300 group min-h-[44px]"
+            className="inline-flex items-center gap-2 px-6 py-4 bg-[#C5A267] text-white font-medium rounded-sm hover:bg-[#D6B378] transition-colors duration-300 group min-h-[44px]"
           >
             <span className="font-regular tracking-wide">EXPLORE OUR ECO-JOURNEY</span>
             <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />

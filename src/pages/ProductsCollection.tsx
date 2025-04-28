@@ -10,7 +10,7 @@ import { HeroScrollDemoProduct } from '../components/ui/HeroScrollDemoProduct';
 import ProductCollectionCTA from '../components/productcollection/ProductCollectionCTA';
 import { useFooterContact } from '../hooks/useFooterContact';
 import { Helmet } from 'react-helmet';
-import { Feature197Demo } from '../components/ui/accordion-feature-section';
+import { Feature197 } from '../components/ui/accordion-feature-section';
 
 const ProductsCollection = () => {
   // State for UI
@@ -115,7 +115,7 @@ const ProductsCollection = () => {
       </Helmet>
       <ProductCollectionHero />
       <ProductGalleryContent />
-      <Feature197Demo />
+      <Feature197 />
       <ProductCollectionVisionnaire />
       <ProductCollectionSteps />
       <div className="w-full">
