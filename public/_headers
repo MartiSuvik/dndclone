@@ -111,3 +111,12 @@
 
 /sample-sales
   X-Robots-Tag: noindex
+
+  /hinged-door-closet?page=1
+  X-Robots-Tag: noindex
+
+/all-doors?page=7
+  X-Robots-Tag: noindex
+
+/traditional
+  X-Robots-Tag: noindex
