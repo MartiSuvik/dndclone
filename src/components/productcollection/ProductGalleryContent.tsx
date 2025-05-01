@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
-import Airtable from 'airtable';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import BottomSheetExpandedCard from './BottomSheetExpandedCard';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import React from 'react';
+import galleryData from '../../data/product-galleries/index.json';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -147,50 +147,23 @@ const ProductGalleryContent: React.FC = () => {
     const fetchProjects = async () => {
       try {
         setLoading(true);
-  
-        const base = new Airtable({
-          apiKey: import.meta.env.VITE_AIRTABLE_API_KEY,
-        }).base(import.meta.env.VITE_AIRTABLE_BASE_ID);
-  
-        const records = await base('database').select().all();
-  
-        const fetchedProjects = records.map((record, index) => {
-          const room = record.fields['Room'] as string;
-          const style = record.fields['Style'] as string;
-          const title = record.fields['Title'] as string;
-          
-          // Get the public ID from Airtable. It might be just a Public ID or a full URL.
-          const publicId = record.fields['Cloudinary URL'] as string;
-          let imageUrl = '';
-  
-          // If publicId already starts with "https://", assume it's a full URL.
-          if (publicId.startsWith("https://")) {
-            // If it already ends with .avif, use it directly.
-            imageUrl = publicId.endsWith('.avif') ? publicId : `${publicId}.avif`;
-          } else {
-            // Otherwise, build the full URL.
-            imageUrl = `https://res.cloudinary.com/designcenter/image/upload/${publicId}.avif`;
-          }
-  
-          return {
-            id: record.id,
-            title,
-            room,
-            style,
-            imageUrl,
-            styleName: styleNames[index % styleNames.length],
-          };
-        });
-  
+        // Map galleryData to Project type
+        const fetchedProjects = (galleryData as any[]).map((item, index) => ({
+          id: item.id,
+          title: item.title || item.style || item.room || `Project ${index + 1}`,
+          room: item.room,
+          style: item.style || '',
+          imageUrl: item.image,
+          styleName: styleNames[index % styleNames.length],
+        }));
         setProjects(fetchedProjects);
         setVisibleProjects(fetchedProjects.slice(0, ITEMS_PER_PAGE));
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to fetch projects');
+        setError(err instanceof Error ? err.message : 'Failed to load projects');
       } finally {
         setLoading(false);
       }
     };
-  
     fetchProjects();
   }, []);
 

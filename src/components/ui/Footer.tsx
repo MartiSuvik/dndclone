@@ -482,7 +482,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ onExpandChange }, ref) =>
                 onExpandChange?.(newExpandedState);
               }}
               data-footer-contact
-              className={`flex items-center space-x-2 font-sans rounded-lg transition-all duration-200 min-h-[44px] ${
+              className={`flex items-center space-x-2 font-sans transition-all duration-200 min-h-[44px] ${
                 isMobile
                   ? 'px-4 md:px-6 py-2 bg-[#C5A267] hover:bg-[#B49157] text-white text-sm'
                   : 'px-6 py-2 bg-[#C5A267] hover:bg-[#B49157] text-white text-sm'
@@ -575,16 +575,20 @@ const Footer = forwardRef<HTMLElement, FooterProps>(({ onExpandChange }, ref) =>
               © {new Date().getFullYear()} D&D Design Center. All rights
               reserved.
             </p>
-            <button
-              onClick={() => {
-                setIsExpanded(false);
-                onExpandChange?.(false);
-              }}
-              className={`text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200 flex items-center space-x-2 ${isMobile ? 'min-h-[44px]' : ''}`}
-            >
-              <span>Close</span>
-              <X className="w-4 h-4" />
-            </button>
+            <div className="flex items-center gap-4">
+              <Link to="/privacy" className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200">Privacy Policy</Link>
+              <Link to="/terms" className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200">Terms of Service</Link>
+              <button
+                onClick={() => {
+                  setIsExpanded(false);
+                  onExpandChange?.(false);
+                }}
+                className={`text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200 flex items-center space-x-2 ${isMobile ? 'min-h-[44px]' : ''}`}
+              >
+                <span>Close</span>
+                <X className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

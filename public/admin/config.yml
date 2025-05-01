@@ -101,3 +101,18 @@ collections:
           - { name: "image", label: "Image", widget: "image" }
           - { name: "alt",   label: "Alt",   widget: "string" }
           - { name: "link",  label: "Link",  widget: "string" }
+
+  # PRODUCT GALLERIES (Home & Product Collection Pages)
+  - name: "product-galleries"
+    label: "Product Galleries"
+    folder: "src/data/product-galleries"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { name: "id", label: "ID", widget: "string" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "room", label: "Room/Category", widget: "string" }
+      - { name: "style", label: "Style", widget: "string", required: false }
+      - { name: "image", label: "Image", widget: "image" }
+      - { name: "description", label: "Description", widget: "text", required: false }

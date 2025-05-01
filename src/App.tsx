@@ -15,6 +15,8 @@ const Collaboration = lazy(() => import('./pages/collaboration'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPostPage = lazy(() => import('./components/blog/BlogPostPage'));
 const Designers = lazy(() => import('./pages/Designers'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -130,6 +132,8 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/designers" element={<Designers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </Suspense>

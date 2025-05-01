@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useVirtualizer } from '@tanstack/react-virtual';
-import Airtable from 'airtable';
 import { Link } from 'react-router-dom';
+import galleryData from '../../data/product-galleries/index.json';
 
 interface Photo {
   id: string;
@@ -48,97 +48,40 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ category, style, onClose })
   }, []);
 
   const fetchPhotos = async () => {
+    setIsLoading(true);
+    setError(null);
     try {
-      setIsLoading(true);
-      setError(null);
-
-      const base = new Airtable({ apiKey: import.meta.env.VITE_AIRTABLE_API_KEY })
-        .base(import.meta.env.VITE_AIRTABLE_BASE_ID);
-
-        function normalizeRoom(room: string): string {
-          // Special case for "Light" which is considered a room
-          if (room.trim().toLowerCase() === "light") return "Light";
-          
-          let lower = room.trim().toLowerCase();
-          return lower.charAt(0).toUpperCase() + lower.slice(1);
-        }
-        
-        function normalizeStyle(style: string): string {
-          // Handle empty or "NONE" style cases
-          if (!style || style.trim().toLowerCase() === "none") return "NONE";
-          
-          if (style.trim().toLowerCase() === "art_deco") return "Art_Deco"; // Special case
-          return style
-            .trim()
-            .toLowerCase()
-            .split(/\s+/) // Split by spaces
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join("_"); // Join with underscores
-        }
-
-      // ✅ Always treat the first argument as the Room, second as the Style
+      // Normalize helpers
+      function normalizeRoom(room: string): string {
+        if (room.trim().toLowerCase() === "light") return "Light";
+        let lower = room.trim().toLowerCase();
+        return lower.charAt(0).toUpperCase() + lower.slice(1);
+      }
+      function normalizeStyle(style: string): string {
+        if (!style || style.trim().toLowerCase() === "none") return "NONE";
+        if (style.trim().toLowerCase() === "art_deco") return "Art_Deco";
+        return style.trim().toLowerCase().split(/\s+/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join("_");
+      }
       const normalizedRoom = normalizeRoom(category);
       const normalizedStyle = normalizeStyle(style);
-
-      console.log("Normalized Room:", normalizedRoom);
-      console.log("Normalized Style:", normalizedStyle);
-
-      let filterByFormula = "";
-      if (normalizedStyle === "NONE") {
-        // Only filter by Room
-        filterByFormula = `{Room} = '${normalizedRoom}'`;
-      } else {
-        // Filter by both
-        filterByFormula = `AND({Room} = '${normalizedRoom}', {Style} = '${normalizedStyle}')`;
-      }
-
-      const records = await base("database")
-        .select({ filterByFormula })
-        .all();
-
-      console.log("Number of records found:", records.length);
-      if (records.length === 0) {
-        throw new Error("No images found for this category and style.");
-      }
-
-      const fetchedPhotos = records.map(record => {
-        const publicId = record.fields["Cloudinary URL"] as string;
-        let imageUrl = "";
-      
-        // Log the raw publicId for debugging
-        console.log("Raw publicId from Airtable:", publicId);
-      
-        if (publicId.startsWith("https://")) {
-          // It's already a full URL
-          imageUrl = publicId.endsWith(".avif") ? publicId : `${publicId}.avif`;
-        } else if (publicId.includes("v1")) {
-          // It contains a version number but isn't a full URL
-          imageUrl = `https://res.cloudinary.com/designcenter/image/upload/${publicId}.avif`;
-        } else {
-          // No version number, add it directly to base URL
-          imageUrl = `https://res.cloudinary.com/designcenter/image/upload/${publicId}.avif`;
-        }
-      
-        // Log the computed URL
-        console.log(`Record ID: ${record.id} | Computed imageUrl: ${imageUrl}`);
-      
-        return {
-          id: record.id,
-          url: imageUrl,
-          category: record.fields["Room"] as string,
-          style: record.fields["Style"] as string || "NONE", // Default to "NONE" if style is missing
-        };
+      // Filter galleryData
+      let filtered = (galleryData as any[]).filter(item => {
+        const roomMatch = item.room === normalizedRoom;
+        const styleMatch = normalizedStyle === "NONE" ? true : (item.style === normalizedStyle);
+        return roomMatch && styleMatch;
       });
-
+      if (filtered.length === 0) throw new Error("No images found for this category and style.");
+      // Map to Photo type
+      const fetchedPhotos = filtered.map(item => ({
+        id: item.id,
+        url: item.image,
+        category: item.room,
+        style: item.style || "NONE"
+      }));
       setPhotos(fetchedPhotos);
-
-      // Preload the first image
-      if (fetchedPhotos.length > 0) {
-        await preloadImage(fetchedPhotos[0].url);
-      }
+      if (fetchedPhotos.length > 0) await preloadImage(fetchedPhotos[0].url);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load images");
-      console.error("Error fetching photos:", err);
     } finally {
       setIsLoading(false);
     }

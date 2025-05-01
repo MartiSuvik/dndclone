@@ -50,6 +50,12 @@ const HomeHeroTop = () => {
         { opacity: 0, y: 30, filter: "blur(5px)" },
         { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.5 },
         "-=1.4"
+      )
+      .fromTo(
+        ".contact-now-hero-btn",
+        { opacity: 0, y: 30, filter: "blur(5px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.2 },
+        "-=0.7" // Animate button right after subtitle, not with extra delay
       );
 
     // Create a separate timeline for the arrow animation to prevent affecting other elements
@@ -123,6 +129,23 @@ const HomeHeroTop = () => {
             Handcrafted Italian luxury interiors designed for timeless elegance
             and contemporary lifestyles.
           </p>
+          <button
+            type="button"
+            className="contact-now-hero-btn mt-8 px-6 py-3 bg-[#C5A267] text-white text-base font-regular shadow hover:bg-[#B49157] transition-colors duration-200 min-h-[44px]"
+            style={{ opacity: 0, transform: 'translateY(30px) scale(1)', filter: 'blur(5px)' }}
+            onClick={() => {
+              const footer = document.getElementById('footer');
+              if (footer) {
+                footer.scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                  const btn = document.querySelector('[data-footer-contact]') as HTMLButtonElement;
+                  if (btn) btn.click();
+                }, 800);
+              }
+            }}
+          >
+            Complimentary Consultation
+          </button>
         </div>
       </div>
       {/* Scroll Arrow */}
