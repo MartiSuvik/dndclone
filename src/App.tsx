@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useEffect, lazy, Suspense, useLayoutEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import ScrollToTop from './components/ui/ScrollToTop';
 import Navbar from './components/ui/Navbar';
@@ -7,6 +7,8 @@ import Footer from './components/ui/Footer';
 import Home from './pages/Home';
 import Loading from './components/ui/Loading';
 import ErrorBoundary from './components/ui/ErrorBoundary';
+import gsap from 'gsap';
+import ScrollSmoother from 'gsap/ScrollSmoother';
 
 const Sustainability = lazy(() => import('./pages/Sustainability'));
 const HowWeWork = lazy(() => import('./pages/HowWeWork'));
@@ -85,6 +87,16 @@ function App() {
     };
   }, []);
 
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollSmoother);
+    ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1.5,
+      effects: true,
+    });
+  }, []);
+
   const triggerFooterContact = () => {
     const footerElement = document.querySelector('#footer');
     if (footerElement instanceof HTMLElement) {
@@ -111,35 +123,38 @@ function App() {
         <meta property="og:type" content="website" />
         <link rel="icon" href="https://res.cloudinary.com/designcenter/image/upload/Favicon_DnD.avif" />
       </Helmet>
-
-      <Router>
-        <ScrollToTop />
-        <Navbar
-          isScrolled={isScrolled}
-          isMenuOpen={isMenuOpen}
-          setIsMenuOpen={setIsMenuOpen}
-          triggerFooterContact={triggerFooterContact}
-          isFooterExpanded={isFooterExpanded}
-        />
-        <ErrorBoundary>
-          <Suspense fallback={<Loading />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/sustainability" element={<Sustainability />} />
-              <Route path="/how-we-work" element={<HowWeWork />} />
-              <Route path="/productscollection" element={<ProductsCollection />} />
-              <Route path="/collaboration" element={<Collaboration />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/:slug" element={<BlogPostPage />} />
-              <Route path="/designers" element={<Designers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
-          </Suspense>
-        </ErrorBoundary>
-        <Footer onExpandChange={setIsFooterExpanded} />
-      </Router>
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <Router>
+            <ScrollToTop />
+            <Navbar
+              isScrolled={isScrolled}
+              isMenuOpen={isMenuOpen}
+              setIsMenuOpen={setIsMenuOpen}
+              triggerFooterContact={triggerFooterContact}
+              isFooterExpanded={isFooterExpanded}
+            />
+            <ErrorBoundary>
+              <Suspense fallback={<Loading />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/sustainability" element={<Sustainability />} />
+                  <Route path="/how-we-work" element={<HowWeWork />} />
+                  <Route path="/productscollection" element={<ProductsCollection />} />
+                  <Route path="/collaboration" element={<Collaboration />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/blog/:slug" element={<BlogPostPage />} />
+                  <Route path="/designers" element={<Designers />} />
+                  <Route path="/privacy" element={<Privacy />} />
+                  <Route path="/terms" element={<Terms />} />
+                  <Route path="*" element={<Navigate to="/" />} />
+                </Routes>
+              </Suspense>
+            </ErrorBoundary>
+            <Footer onExpandChange={setIsFooterExpanded} />
+          </Router>
+        </div>
+      </div>
     </>
   );
 }
