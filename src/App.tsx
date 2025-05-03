@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { useState, useEffect, lazy, Suspense, useLayoutEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import ScrollToTop from './components/ui/ScrollToTop';
 import Navbar from './components/ui/Navbar';
@@ -8,7 +8,6 @@ import Home from './pages/Home';
 import Loading from './components/ui/Loading';
 import ErrorBoundary from './components/ui/ErrorBoundary';
 import gsap from 'gsap';
-import ScrollSmoother from 'gsap/ScrollSmoother';
 
 const Sustainability = lazy(() => import('./pages/Sustainability'));
 const HowWeWork = lazy(() => import('./pages/HowWeWork'));
@@ -85,16 +84,6 @@ function App() {
     return () => {
       document.head.removeChild(script);
     };
-  }, []);
-
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollSmoother);
-    ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1.5,
-      effects: true,
-    });
   }, []);
 
   const triggerFooterContact = () => {
