@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="p:domain_verify" content="1b5b13366a4ef9f63076fb7861931423"/>
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G‑HL2DXBM443"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,196 +12,50 @@
       gtag('js', new Date());
       gtag('config', 'G‑HL2DXBM443');
     </script>
+    <!-- Netlify CMS Styles -->
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://unpkg.com/netlify-cms/dist/cms.css"
+      href="https://unpkg.com/netlify-cms@^2.10.192/dist/netlify-cms.css"
       rel="stylesheet"
     />
-    <!-- Add custom styles for our helper UI -->
     <style>
-      .auto-fill-helper {
+      .url-helper {
         margin: 20px 0;
-        padding: 10px;
-        background-color: #f8f9fa;
-        border: 1px solid #d6dce3;
+        padding: 15px;
+        background-color: #f5f7f9;
+        border: 1px solid #e1e5e8;
         border-radius: 5px;
       }
-      .auto-fill-helper h3 {
+      .url-helper h3 {
         margin-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         font-size: 16px;
         font-weight: bold;
       }
-      .auto-fill-button {
-        display: inline-block;
-        padding: 8px 12px;
-        background-color: #3d93de;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        font-size: 14px;
-        cursor: pointer;
+      .url-helper-text {
+        margin-bottom: 15px;
       }
-      .auto-fill-button:hover {
-        background-color: #2275c3;
-      }
-      .auto-fill-help-text {
+      .field-hint {
+        display: block;
         margin-top: 8px;
         font-size: 13px;
-        color: #666;
+        color: #777;
       }
     </style>
   </head>
   <body>
-    <!-- 1) Cloudinary plugin must load BEFORE netlify-cms -->
-    <script src="https://unpkg.com/netlify-cms-media-library-cloudinary/dist/bundle.js"></script>
-
-    <!-- 2) Then the core Netlify CMS -->
-    <script src="https://unpkg.com/netlify-cms/dist/cms.js"></script>
-
-    <!-- 3) Netlify Identity widget (for git-gateway auth) -->
-    <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- The order of scripts is important - DO NOT CHANGE -->
     
-    <!-- 4) Custom script for auto-filling using a proper CMS-integrated approach -->
-    <script>
-      // Manual helper for auto-filling from image URLs
-      // This approach is more reliable as it uses the official CMS.registerEventListener method
-      window.addEventListener('DOMContentLoaded', function() {
-        const CMS = window.CMS;
-        
-        // Initialize CMS with Cloudinary
-        CMS.registerMediaLibrary(window.NetlifyCmsMediaLibraryCloudinary);
-        
-        // A helper function to extract information from image URLs
-        function parseCloudinaryImageUrl(imageUrl) {
-          if (!imageUrl || !imageUrl.includes('cloudinary.com/designcenter/image/upload')) {
-            return null;
-          }
-          
-          try {
-            // Extract path pattern from URL like:
-            // https://res.cloudinary.com/designcenter/image/upload/v1744036625/Product_2/Furniture/Bedroom/Bedroom_11.avif
-            const pathMatch = imageUrl.match(/\/upload\/[^\/]+\/(.+?)\.[a-zA-Z0-9]+$/);
-            
-            if (!pathMatch || !pathMatch[1]) {
-              console.log('Could not extract path from URL:', imageUrl);
-              return null;
-            }
-            
-            const fullPath = pathMatch[1]; // e.g., "Product_2/Furniture/Bedroom/Bedroom_11"
-            const pathParts = fullPath.split('/');
-            
-            if (pathParts.length < 3) {
-              console.log('Not enough path parts in URL:', fullPath);
-              return null;
-            }
-            
-            // Extract parts
-            const folder = pathParts[0]; // e.g., "Product_2"
-            const room = pathParts[1];   // e.g., "Furniture"
-            const style = pathParts[2];  // e.g., "Bedroom" 
-            const filename = pathParts[pathParts.length-1]; // e.g., "Bedroom_11"
-            
-            // Generate values
-            return {
-              id: fullPath,
-              slug: filename.toLowerCase().replace(/_/g, '-'),
-              title: filename.replace(/_/g, ' '),
-              room: room === "Lighting" ? "Light" : room,
-              style: (room === "Kitchen" || room === "Furniture") ? style : ""
-            };
-          } catch (error) {
-            console.error('Error parsing image URL:', error);
-            return null;
-          }
-        }
-        
-        // Add a custom preview template to inject our auto-fill helper UI
-        CMS.registerPreviewTemplate('product-galleries', function(props) {
-          const entry = props.entry;
-          const imageUrl = entry.getIn(['data', 'image']);
-          
-          // Create UI container
-          const container = document.createElement('div');
-          
-          // Add auto-fill helper UI
-          const helperDiv = document.createElement('div');
-          helperDiv.className = 'auto-fill-helper';
-          
-          const helperTitle = document.createElement('h3');
-          helperTitle.textContent = 'Auto-Fill Helper';
-          
-          const autoFillButton = document.createElement('button');
-          autoFillButton.className = 'auto-fill-button';
-          autoFillButton.textContent = 'Extract Information from Image URL';
-          autoFillButton.onclick = function() {
-            // Get current state of form
-            const currentImage = entry.getIn(['data', 'image']);
-            
-            if (!currentImage) {
-              alert('Please select an image first.');
-              return;
-            }
-            
-            // Parse the URL and extract field values
-            const parsedData = parseCloudinaryImageUrl(currentImage);
-            
-            if (!parsedData) {
-              alert('Could not parse information from the image URL. Make sure it follows the pattern: Product_X/Room/Style/Filename');
-              return;
-            }
-            
-            // Log the extracted data
-            console.log('Extracted data from image URL:', parsedData);
-            
-            // Alert the user since we can't directly modify the form
-            alert(
-              'Extracted the following information from image URL:\n\n' +
-              `ID: ${parsedData.id}\n` +
-              `Slug: ${parsedData.slug}\n` +
-              `Title: ${parsedData.title}\n` +
-              `Room: ${parsedData.room}\n` +
-              `Style: ${parsedData.style}\n\n` +
-              'Please copy these values to their corresponding fields.'
-            );
-          };
-          
-          const helpText = document.createElement('p');
-          helpText.className = 'auto-fill-help-text';
-          helpText.innerHTML = 'First select your image, then click the button above to extract information from the image URL. <br>' +
-                              'The URL should follow the pattern: Product_X/Room/Style/Filename';
-          
-          // Assemble helper UI
-          helperDiv.appendChild(helperTitle);
-          helperDiv.appendChild(autoFillButton);
-          helperDiv.appendChild(helpText);
-          
-          // Add helper to main container
-          container.appendChild(helperDiv);
-          
-          // Add regular preview elements
-          const previewDiv = document.createElement('div');
-          
-          const imgPreview = document.createElement('img');
-          if (imageUrl) {
-            imgPreview.src = imageUrl;
-            imgPreview.style.maxWidth = '100%';
-            imgPreview.style.maxHeight = '300px';
-            imgPreview.style.marginTop = '20px';
-          }
-          
-          previewDiv.appendChild(imgPreview);
-          container.appendChild(previewDiv);
-          
-          return container;
-        });
-        
-        // Log that our custom code is loaded
-        console.log('Auto-fill helper is ready. Select an image and use the helper to extract information.');
-      });
-    </script>
+    <!-- 1. First load Netlify CMS (includes built-in media libraries) -->
+    <script src="https://unpkg.com/netlify-cms@^2.10.192/dist/netlify-cms.js"></script>
+    
+    <!-- 2. Load Netlify Identity widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    
+    <!-- 3. Load your custom widget AFTER CMS is initialized -->
+    <script src="./customImageWidget.js"></script>
   </body>
 </html>
