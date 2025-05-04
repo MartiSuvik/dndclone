@@ -113,6 +113,27 @@ collections:
     - { name: "slug", label: "Slug", widget: "string" }
     - { name: "id", label: "ID", widget: "string" }
     - { name: "image", label: "Image", widget: "image" }
-    - { name: "room", label: "Room", widget: "string" }
-    - { name: "style", label: "Style", widget: "string" }
+    - name: "room"
+      label: "Room"
+      widget: "select"
+      options:
+        - { label: "Kitchen", value: "Kitchen" }
+        - { label: "Furniture", value: "Furniture" }
+        - { label: "Lighting", value: "Light" }
+        - { label: "Bath", value: "Bath" }
+        - { label: "Outdoor", value: "Outdoor" }
+        - { label: "Office", value: "Office" }
+        - { label: "Closet", value: "Closet" }
+    - name: "style"
+      label: "Style"
+      widget: "select"
+      options:
+        - { label: "Modern (Kitchen)", value: "Modern" }
+        - { label: "Traditional (Kitchen)", value: "Traditional" }
+        - { label: "Art Deco (Kitchen)", value: "Art_Deco" }
+        - { label: "Living Room (Furniture)", value: "Living" }
+        - { label: "Dining Room (Furniture)", value: "Dining" }
+        - { label: "Bedroom (Furniture)", value: "Bedroom" }
+        - { label: "None", value: "" }
+      required: false
     - { name: "title", label: "Title", widget: "string" }
