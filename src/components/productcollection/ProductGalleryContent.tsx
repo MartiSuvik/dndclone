@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import BottomSheetExpandedCard from './BottomSheetExpandedCard';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import React from 'react';
-import galleryData from '../../data/product-galleries/index.json';
+import galleryData from '../../data/product-galleries/index';
 
 gsap.registerPlugin(ScrollTrigger);
 

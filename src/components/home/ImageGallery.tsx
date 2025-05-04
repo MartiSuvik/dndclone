@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import { Link } from 'react-router-dom';
-import galleryData from '../../data/product-galleries/index.json';
+import galleryData from '../../data/product-galleries/index';
 
 interface Photo {
   id: string;

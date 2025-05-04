@@ -1,1 +1,8 @@
-"{\"id\": \"Product_2/Kitchen/Art_Deco/Kitchen_Art_Deco_15\", \"image\": \"https://res.cloudinary.com/designcenter/image/upload/v1744046396/Product_2/Kitchen/Art_Deco/Kitchen_Art_Deco_15.avif\", \"room\": \"Kitchen\", \"style\": \"Art_Deco\", \"title\": \"Kitchen_Art_Deco_15\"}"
+{
+  "slug": "kitchen-art-deco-15",
+  "id": "Product_2/Kitchen/Art_Deco/Kitchen_Art_Deco_15",
+  "image": "https://res.cloudinary.com/designcenter/image/upload/v1744046396/Product_2/Kitchen/Art_Deco/Kitchen_Art_Deco_15.avif",
+  "room": "Kitchen",
+  "style": "Art_Deco",
+  "title": "Kitchen_Art_Deco_15"
+}
