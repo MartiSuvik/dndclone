@@ -1,22 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import DesignersHero from '../components/designers/DesignersHero';
-import DesignerProfile from '../components/designers/DesignerProfile';
+import DesignerCard from '../components/designers/DesignerCard';
 import DesignersCTA from '../components/designers/DesignersCTA';
 
 interface Designer {
-  id: string;
   name: string;
-  title: string;
-  bio: string;
+  description: string;
   photo: string;
   website: string;
-  featuredWorks: {
-    id: number;
-    image: string;
-    alt: string;
-    link: string;
-  }[];
 }
 
 const Designers: React.FC = () => {
@@ -26,14 +18,10 @@ const Designers: React.FC = () => {
   useEffect(() => {
     const loadDesigners = async () => {
       try {
-        // In a real application, you'd fetch this from an API
-        // For now we're using the import.meta.glob to load from JSON files
         const modules = import.meta.glob('../data/designers/*.json');
         const designerData = await Promise.all(
           Object.values(modules).map(module => module())
         );
-        
-        // Extract the default exports from the modules
         const loadedDesigners = designerData.map(module => (module as any).default || module);
         setDesigners(loadedDesigners);
       } catch (error) {
@@ -42,11 +30,9 @@ const Designers: React.FC = () => {
         setLoading(false);
       }
     };
-
     loadDesigners();
   }, []);
 
-  // Function to trigger footer contact form
   const triggerFooterContact = () => {
     const footerElement = document.querySelector('#footer');
     if (footerElement instanceof HTMLElement) {
@@ -89,11 +75,10 @@ const Designers: React.FC = () => {
             </div>
           ) : (
             designers.map((designer, index) => (
-              <DesignerProfile 
-                key={designer.id}
+              <DesignerCard 
+                key={designer.name}
                 designer={designer}
                 index={index}
-                onConnect={() => triggerFooterContact()}
               />
             ))
           )}

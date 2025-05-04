@@ -95,24 +95,12 @@ collections:
     label: "Designers"
     folder: "src/data/designers"
     create: true
-    slug: "{{slug}}"
     format: "json"
     fields:
-      - { name: "slug",    label: "Slug",    widget: "string" }
-      - { name: "id",      label: "ID",      widget: "string" }
-      - { name: "name",    label: "Name",    widget: "string" }
-      - { name: "title",   label: "Title",   widget: "string" }
-      - { name: "bio",     label: "Bio",     widget: "text"   }
-      - { name: "photo",   label: "Photo",   widget: "image"  }
-      - { name: "website", label: "Website", widget: "string" }
-      - name: "featuredWorks"
-        label: "Featured Works"
-        widget: "list"
-        fields:
-          - { name: "id",    label: "ID",    widget: "number" }
-          - { name: "image", label: "Image", widget: "image" }
-          - { name: "alt",   label: "Alt",   widget: "string" }
-          - { name: "link",  label: "Link",  widget: "string" }
+      - { name: "name",        label: "Name",        widget: "string" }
+      - { name: "description", label: "Description", widget: "text"   }
+      - { name: "photo",       label: "Photo",       widget: "image"  }
+      - { name: "website",     label: "Website",     widget: "string" }
 
   - name: "product-galleries"
     label: "Product Galleries"

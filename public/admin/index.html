@@ -14,81 +14,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/netlify-cms@^2.10.192/dist/netlify-cms.css" rel="stylesheet" />
-  <style>
-    .url-helper {
-      margin: 20px 0;
-      padding: 15px;
-      background-color: #f5f7f9;
-      border: 1px solid #e1e5e8;
-      border-radius: 5px;
-    }
-    .url-helper h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    .url-helper-text {
-      margin-bottom: 15px;
-    }
-    .field-hint {
-      display: block;
-      margin-top: 8px;
-      font-size: 13px;
-      color: #777;
-    }
-  </style>
 </head>
 <body>
   <script src="https://unpkg.com/netlify-cms@^2.10.192/dist/netlify-cms.js"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  
-  <script>
-    window.addEventListener('load', () => {
-      const waitForCMS = () => {
-        if (!window.CMS || !window.CMS.getWidget) {
-          setTimeout(waitForCMS, 100);
-          return;
-        }
-
-        const ImageControl = window.CMS.getWidget('image').control;
-        const h = window.h;
-
-        const CustomImageWithAutoFields = props => {
-          const wrappedOnChange = newValue => {
-            props.onChange(newValue);
-
-            if (newValue) {
-              const urlParts = newValue.split('/');
-              const filename = urlParts[urlParts.length - 1].split('.')[0];
-              const title = filename.replace(/[-_]/g, ' ');
-              const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-              const id = filename;
-
-              const root = document.querySelector(`[for="${props.forID}"]`)?.closest('[data-scope]');
-              if (root) {
-                const fill = (name, value) => {
-                  const el = root.querySelector(`input[id$="${name}"]`);
-                  if (el) {
-                    el.value = value;
-                    el.dispatchEvent(new Event('input', { bubbles: true }));
-                  }
-                };
-                fill('title', title);
-                fill('slug', slug);
-                fill('id', id);
-              }
-            }
-          };
-
-          return h(ImageControl, { ...props, onChange: wrappedOnChange });
-        };
-
-        window.CMS.registerWidget('customAutoImage', CustomImageWithAutoFields);
-      };
-
-      waitForCMS();
-    });
-  </script>
 </body>
 </html>
