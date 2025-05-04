@@ -13,7 +13,11 @@ media_library:
   config:
     cloud_name: designcenter
     api_key: 731759592841628
-    upload_preset: Photo_1
+    default_transformations:
+      - - fetch_format: auto
+          quality: auto
+    multiple: false
+    # Removed the default upload_preset to avoid conflicts
 
 collections:
   # BLOG (Markdown)
@@ -25,8 +29,16 @@ collections:
     extension: "md"
     fields:
       - { name: "title", label: "Title", widget: "string" }
+      - { name: "excerpt", label: "Excerpt", widget: "text" }
+      - { name: "category", label: "Category", widget: "string" }
       - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "cover", label: "Cover Image", widget: "image" }
+      - { name: "readTime", label: "Read Time (minutes)", widget: "number" }
+      - name: "image"
+        label: "Cover Image"
+        widget: "object"
+        fields:
+          - { name: "url", label: "Image URL", widget: "image" }
+          - { name: "alt", label: "Alt Text", widget: "string" }
       - { name: "body", label: "Body", widget: "markdown" }
 
   # PROJECTS (Transformations Page)
@@ -102,7 +114,6 @@ collections:
           - { name: "alt",   label: "Alt",   widget: "string" }
           - { name: "link",  label: "Link",  widget: "string" }
 
-  # PRODUCT GALLERIES (Home & Product Collection Pages)
   - name: "product-galleries"
     label: "Product Galleries"
     folder: "src/data/product-galleries"
@@ -110,36 +121,31 @@ collections:
     slug: "{{slug}}"
     format: "json"
     fields:
-    - { name: "slug", label: "Slug", widget: "string" }
-    - { name: "id", label: "ID", widget: "string" }
-    - name: "image"
-      label: "Image"
-      widget: "image"
-      hint: "Select an image from Cloudinary to automatically fill other fields based on the path pattern"
-      media_library:
-        config:
-          folder: "Product_2"
-    - name: "room"
-      label: "Room"
-      widget: "select"
-      options:
-        - { label: "Kitchen", value: "Kitchen" }
-        - { label: "Furniture", value: "Furniture" }
-        - { label: "Lighting", value: "Light" }
-        - { label: "Bath", value: "Bath" }
-        - { label: "Outdoor", value: "Outdoor" }
-        - { label: "Office", value: "Office" }
-        - { label: "Closet", value: "Closet" }
-    - name: "style"
-      label: "Style"
-      widget: "select"
-      options:
-        - { label: "Modern (Kitchen)", value: "Modern" }
-        - { label: "Traditional (Kitchen)", value: "Traditional" }
-        - { label: "Art Deco (Kitchen)", value: "Art_Deco" }
-        - { label: "Living Room (Furniture)", value: "Living" }
-        - { label: "Dining Room (Furniture)", value: "Dining" }
-        - { label: "Bedroom (Furniture)", value: "Bedroom" }
-        - { label: "None", value: "" }
-      required: false
-    - { name: "title", label: "Title", widget: "string" }
+      - name: "room"
+        label: "Room"
+        widget: "select"
+        options:
+          - { label: "Kitchen", value: "Kitchen" }
+          - { label: "Furniture", value: "Furniture" }
+          - { label: "Lighting", value: "Light" }
+          - { label: "Bath", value: "Bath" }
+          - { label: "Outdoor", value: "Outdoor" }
+          - { label: "Office", value: "Office" }
+          - { label: "Closet", value: "Closet" }
+      - name: "style"
+        label: "Style"
+        widget: "select"
+        options:
+          - { label: "Modern (Kitchen)", value: "Modern" }
+          - { label: "Traditional (Kitchen)", value: "Traditional" }
+          - { label: "Art Deco (Kitchen)", value: "Art_Deco" }
+          - { label: "Living Room (Furniture)", value: "Living" }
+          - { label: "Dining Room (Furniture)", value: "Dining" }
+          - { label: "Bedroom (Furniture)", value: "Bedroom" }
+          - { label: "None", value: "" }
+        required: false
+      - name: "image"
+        label: "Image"
+        widget: "image"
+        hint: "Select an image to auto-fill title"
+      - { name: "title", label: "Title", widget: "string" }
