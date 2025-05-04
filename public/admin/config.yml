@@ -112,6 +112,24 @@ collections:
     fields:
     - { name: "id", label: "ID", widget: "string" }
     - { name: "image", label: "Image", widget: "image" }
-    - { name: "room", label: "Room", widget: "string" }
-    - { name: "style", label: "Style", widget: "string" }
+    - name: "room"
+      label: "Room"
+      widget: "select"
+      options:
+        - Kitchen
+        - Furniture
+        - Bath
+        - Closet
+        - Office
+        - Light
+    - name: "style"
+      label: "Style"
+      widget: "select"
+      options:
+        - { label: "Traditional (Kitchen)", value: "Traditional", parent: "Kitchen" }
+        - { label: "Modern (Kitchen)", value: "Modern", parent: "Kitchen" }
+        - { label: "Art_Deco (Kitchen)", value: "Art_Deco", parent: "Kitchen" }
+        - { label: "Living (Furniture)", value: "Living", parent: "Furniture" }
+        - { label: "Bedroom (Furniture)", value: "Bedroom", parent: "Furniture" }
+        - { label: "Dining (Furniture)", value: "Dining", parent: "Furniture" }
     - { name: "title", label: "Title", widget: "string" }
