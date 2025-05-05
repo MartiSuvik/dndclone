@@ -265,7 +265,7 @@ const MapComponent = ({ isMobile, isExpanded }: { isMobile: boolean, isExpanded:
           height="100%"
           frameBorder="0"
           style={{ border: 0 }}
-          src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBLSNeo65Xg4Imwlxq-2GGCARWAIjVk5Ek&q=2615 East 17th Street, Brooklyn, New York 11235, USA&zoom=15`}
+          src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDdqp0iCDuV0pnlbT8hB8DU7lchwEFCdyA&q=2615+East+17th+Street+Brooklyn,+New+York+11235,+USA&zoom=15`}
           allowFullScreen
         />
       </div>
