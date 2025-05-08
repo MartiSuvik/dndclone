@@ -11,6 +11,8 @@ type Brand = {
   logo: string;
   website: string;
   description: string;
+  showcaseImage?: string;
+  displayOrder?: number;
 };  
 
 const VisionnaireShowcase = () => {
@@ -32,7 +34,21 @@ const VisionnaireShowcase = () => {
       const imports = await Promise.all(
         Object.values(modules).map((load) => load())
       );
-      setBrandPartners(imports.map((mod: any) => mod.default || mod));
+      // Sort brands by displayOrder if available, otherwise keep same order
+      const brands = imports.map((mod: any) => mod.default || mod);
+      const sortedBrands = brands.sort((a, b) => {
+        // If both have displayOrder, sort by it
+        if (a.displayOrder !== undefined && b.displayOrder !== undefined) {
+          return a.displayOrder - b.displayOrder;
+        }
+        // If only a has displayOrder, it comes first
+        if (a.displayOrder !== undefined) return -1;
+        // If only b has displayOrder, it comes first
+        if (b.displayOrder !== undefined) return 1;
+        // If neither has displayOrder, maintain original order
+        return 0;
+      });
+      setBrandPartners(sortedBrands);
     };
   
     loadBrands();

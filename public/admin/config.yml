@@ -82,13 +82,19 @@ collections:
       - { name: "slug",        label: "Slug",        widget: "string" }
       - { name: "name",        label: "Name",        widget: "string" }
       - name: "logo"
-        label: "Logo"
+        label: "Brand Logo"
         widget: "image"
         media_library:
           config:
             folder: "Navbar_7/Logos_For_Navbar"
+      - name: "showcaseImage"
+        label: "Showcase Image"
+        widget: "image"
+        hint: "Product/interior image for the brand visual showcase (used in the grid layout)"
+        required: false
       - { name: "website",     label: "Website URL", widget: "string" }
       - { name: "description", label: "Description", widget: "text"   }
+      - { name: "displayOrder", label: "Display Order", widget: "number", default: 10, hint: "Lower numbers appear first", required: false }
 
   # DESIGNERS (Designers Page)
   - name: "designers"
