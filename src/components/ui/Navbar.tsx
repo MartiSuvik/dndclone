@@ -45,8 +45,8 @@ const menuItems: MenuItem[] = [
   {
     title: 'COLLABORATION',
     href: '/collaboration',
-    image: 'https://res.cloudinary.com/designcenter/image/upload/v1745153979/Navbar_7/Menu_Images/brand_collage.avif',
-    alt: 'Visionnaire Collaboration – Luxury Interiors',
+    image: 'https://res.cloudinary.com/designcenter/image/upload/v1746944431/Navbar_7/Menu_Images/brand_collage1.avif',
+    alt: 'Collaboration – Luxury Interiors',
   },
   {
     title: 'DESIGNERS',
