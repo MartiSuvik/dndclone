@@ -1,0 +1,217 @@
+/* Custom styles for the quiz components */
+
+/* Custom scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(197, 162, 103, 0.5);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 162, 103, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation classes */
+.animate-fadeIn {
+  opacity: 0 !important; /* Start hidden */
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-delay: 0.01s; /* Tiny delay to ensure initial state is applied */
+}
+
+.animate-scaleIn {
+  opacity: 0 !important; /* Start hidden */
+  transform: scale(0.9) !important; /* Initial state from keyframes */
+  animation: scaleIn 0.5s ease-out forwards;
+  animation-delay: 0.01s; /* Tiny delay to ensure initial state is applied */
+}
+
+.animate-slideUp {
+  opacity: 0 !important; /* Start hidden */
+  transform: translateY(20px) !important; /* Initial state from keyframes */
+  animation: slideUp 0.5s ease-out forwards;
+  animation-delay: 0.01s; /* Tiny delay to ensure initial state is applied */
+}
+
+.animate-slideDown {
+  opacity: 0 !important; /* Start hidden */
+  transform: translateY(-20px) !important; /* Initial state from keyframes */
+  animation: slideDown 0.5s ease-out forwards;
+  animation-delay: 0.01s; /* Tiny delay to ensure initial state is applied */
+}
+
+/* Quiz container transitions */
+.quiz-fade-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.quiz-fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms, transform 500ms;
+}
+
+.quiz-fade-exit {
+  opacity: 1;
+}
+
+.quiz-fade-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 500ms, transform 500ms;
+}
+
+/* Background gradients */
+.quiz-bg-gradient {
+  background: linear-gradient(135deg, rgba(25,25,25,0.9) 0%, rgba(40,40,40,0.8) 100%);
+}
+
+/* Ensure quiz section is properly displayed */
+.quiz-section {
+  position: relative;
+  z-index: 30; /* Increased z-index */
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; /* Changed from #fff to transparent */
+}
+
+/* Fix for quiz fullscreen mode */
+.fixed.inset-0.z-\[100\] {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  z-index: 999 !important; /* Very high z-index to ensure it's on top */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow-y: auto !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.9) !important; /* Ensure background is visible */
+  transition: opacity 0.5s ease-in-out !important;
+}
+
+/* Fix for quiz wrapper and content */
+.fixed.inset-0.z-\[100\] > div {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 100vh !important;
+  width: 100% !important;
+  padding: 20px !important;
+  box-sizing: border-box !important;
+}
+
+.fixed.inset-0.z-\[100\] > div > div {
+  max-width: 1200px !important;
+  width: 100% !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure the quiz intro card is properly visible */
+.quiz-section .bg-\[\#1A1A1A\] {
+  background-color: #1A1A1A !important;
+  min-height: 100px !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* For smoother transitions when going fullscreen */
+body.quiz-active {
+  overflow: hidden !important;
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Make sure buttons have proper hover states */
+.quiz-section button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Improved focus states for accessibility */
+.quiz-section button:focus,
+.quiz-section input:focus {
+  outline: 2px solid rgba(197, 162, 103, 0.7);
+  outline-offset: 2px;
+}
+
+/* Style for the quiz scroll container */
+.max-h-\[70vh\] {
+  max-height: 70vh !important;
+  overflow-y: auto !important;
+  padding-right: 16px !important;
+}
+
+/* Fix for quiz fullscreen container */
+.quiz-section [class*="max-w-5xl"] {
+  z-index: 1000 !important;
+  position: relative !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Ensure content is visible in fullscreen mode */
+.fixed.inset-0 .min-h-screen {
+  visibility: visible !important;
+  opacity: 1 !important;
+  display: flex !important;
+}

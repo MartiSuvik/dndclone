@@ -7,7 +7,6 @@ import Footer from './components/ui/Footer';
 import Home from './pages/Home';
 import Loading from './components/ui/Loading';
 import ErrorBoundary from './components/ui/ErrorBoundary';
-import gsap from 'gsap';
 
 const Sustainability = lazy(() => import('./pages/Sustainability'));
 const HowWeWork = lazy(() => import('./pages/HowWeWork'));
@@ -18,6 +17,7 @@ const BlogPostPage = lazy(() => import('./components/blog/BlogPostPage'));
 const Designers = lazy(() => import('./pages/Designers'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
+const CraftedCalm = lazy(() => import('./pages/CraftedCalm'));
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -136,6 +136,7 @@ function App() {
                   <Route path="/designers" element={<Designers />} />
                   <Route path="/privacy" element={<Privacy />} />
                   <Route path="/terms" element={<Terms />} />
+                  <Route path="/crafted-calm" element={<CraftedCalm />} />
                   <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
               </Suspense>
