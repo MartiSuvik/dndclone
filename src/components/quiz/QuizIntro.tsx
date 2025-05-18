@@ -107,53 +107,61 @@ const QuizIntro: React.FC<QuizIntroProps> = ({ startQuiz }) => {
         </div>
         
         {/* Right side: Benefits */}
-        <div 
-          ref={benefitsRef}
-          className="bg-white/10 backdrop-blur-sm p-10 rounded-xl shadow-xl border border-white/20"
-        >
-          <h3 className="text-3xl font-serif mb-10 text-white font-bold tracking-tight text-left">
-            Why take the quiz consultation?
-          </h3>
-          <ul className="flex flex-col gap-7">
-            {/* Benefit 1 */}
-            <li className="flex items-start gap-4 bg-white/5 rounded-lg p-5 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="flex-shrink-0 w-12 h-12 bg-[#C5A267] rounded-full flex items-center justify-center shadow-md border-4 border-white/20">
-                <span className="text-white font-bold text-2xl">1</span>
+        <div ref={benefitsRef} className="space-y-8 mt-6 lg:mt-0">
+
+          {/* Reviews */}
+          <div className="space-y-6">
+            <h3 className="text-white text-xl font-serif mb-4">What others say...</h3>
+            <div className="bg-gradient-to-r from-white/10 to-white/5 rounded-lg p-5 border border-white/10 shadow-lg transform transition-all duration-300 hover:translate-y-[-5px] hover:shadow-xl">
+              <div className="flex items-center mb-3">
+                <div className="flex text-[#C5A267]">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                      <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                    </svg>
+                  ))}
+                </div>
               </div>
-              <div>
-                <h4 className="text-lg sm:text-xl font-serif text-white font-semibold mb-1 leading-snug">Discover your style</h4>
-                <p className="text-white/80 text-base sm:text-lg leading-relaxed">Understand your design preferences in just a few minutes with our intelligent algorithm</p>
+              <p className="text-white italic text-lg font-light leading-relaxed">"This quiz gave me clarity on my style in minutes!"</p>
+              <div className="flex items-center mt-4">
+                <div className="w-8 h-8 bg-[#C5A267] rounded-full flex items-center justify-center text-white font-bold">A</div>
+                <p className="text-white/70 text-sm ml-3">Alex B. <span className="text-white/50">· New York</span></p>
               </div>
-            </li>
-            {/* Benefit 2 */}
-            <li className="flex items-start gap-4 bg-white/5 rounded-lg p-5 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="flex-shrink-0 w-12 h-12 bg-[#C5A267] rounded-full flex items-center justify-center shadow-md border-4 border-white/20">
-                <span className="text-white font-bold text-2xl">2</span>
+            </div>
+            
+            <div className="bg-gradient-to-r from-white/10 to-white/5 rounded-lg p-5 border border-white/10 shadow-lg transform transition-all duration-300 hover:translate-y-[-5px] hover:shadow-xl">
+              <div className="flex items-center mb-3">
+                <div className="flex text-[#C5A267]">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                      <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                    </svg>
+                  ))}
+                </div>
               </div>
-              <div>
-                <h4 className="text-lg sm:text-xl font-serif text-white font-semibold mb-1 leading-snug">Expert recommendation</h4>
-                <p className="text-white/80 text-base sm:text-lg leading-relaxed">Receive custom design suggestions tailored to your unique taste and lifestyle</p>
+              <p className="text-white italic text-lg font-light leading-relaxed">"Loved the personalized recommendations. They transformed my space completely."</p>
+              <div className="flex items-center mt-4">
+                <div className="w-8 h-8 bg-[#C5A267] rounded-full flex items-center justify-center text-white font-bold">M</div>
+                <p className="text-white/70 text-sm ml-3">Maria S. <span className="text-white/50">· Chicago</span></p>
               </div>
-            </li>
-            {/* Benefit 3 */}
-            <li className="flex items-start gap-4 bg-white/5 rounded-lg p-5 shadow-sm hover:shadow-lg transition-shadow">
-              <div className="flex-shrink-0 w-12 h-12 bg-[#C5A267] rounded-full flex items-center justify-center shadow-md border-4 border-white/20">
-                <span className="text-white font-bold text-2xl">3</span>
+            </div>
+            
+            <div className="bg-gradient-to-r from-white/10 to-white/5 rounded-lg p-5 border border-white/10 shadow-lg transform transition-all duration-300 hover:translate-y-[-5px] hover:shadow-xl">
+              <div className="flex items-center mb-3">
+                <div className="flex text-[#C5A267]">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                      <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+                    </svg>
+                  ))}
+                </div>
               </div>
-              <div>
-                <h4 className="text-lg sm:text-xl font-serif text-white font-semibold mb-1 leading-snug">Visualize possibilities</h4>
-                <p className="text-white/80 text-base sm:text-lg leading-relaxed">See how different styles would transform your specific spaces and rooms</p>
+              <p className="text-white italic text-lg font-light leading-relaxed">"A fun way to discover my design taste! The results matched my preferences perfectly."</p>
+              <div className="flex items-center mt-4">
+                <div className="w-8 h-8 bg-[#C5A267] rounded-full flex items-center justify-center text-white font-bold">J</div>
+                <p className="text-white/70 text-sm ml-3">John K. <span className="text-white/50">· Miami</span></p>
               </div>
-            </li>
-          </ul>
-          <div className="mt-10 lg:hidden">
-            <button
-              onClick={handleStartQuiz}
-              className="w-full bg-[#C5A267] hover:bg-[#B49157] text-white px-8 py-4 text-xl font-medium transition-all duration-300 flex items-center justify-center gap-3 min-h-[52px] transform hover:translate-y-[-2px] hover:shadow-lg"
-            >
-              Begin Your Style Journey
-              <ArrowRight className="w-5 h-5" />
-            </button>
+            </div>
           </div>
         </div>
       </div>
