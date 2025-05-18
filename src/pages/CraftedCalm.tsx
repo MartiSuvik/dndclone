@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, Clock, ShieldCheck, Trophy } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import galleryData from '../data/product-galleries/index';
 import QuizContainer from '../components/quiz/QuizContainer';
@@ -33,12 +33,13 @@ const CraftedCalm = () => {
   const subheadRef = useRef<HTMLParagraphElement>(null);
   const ctaButtonRef = useRef<HTMLButtonElement>(null);
   const quizSectionRef = useRef<HTMLElement>(null);
+  const benefitsRef = useRef<HTMLDivElement>(null); // Added for benefits section
   
   // State variables
   const [videoLoaded, setVideoLoaded] = useState(false);
 
   // Intersection observers for animations
-  const { ref: featuresRef, inView: featuresInView } = useInView({
+  const { inView: featuresInView } = useInView({
     threshold: 0.25,
     triggerOnce: true,
   });
@@ -195,51 +196,49 @@ const CraftedCalm = () => {
         </div>
       </section>
 
-      {/* What You Get Section */}
-      <section 
-        ref={featuresRef} 
-        className="py-20 sm:py-28 bg-gray-50"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif text-gray-900">
-              What you receive
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
-            {/* Feature 1 */}
-            <div className="feature-item text-center">
-              <div
-                className="inline-flex bg-[#606061] items-center justify-center w-20 h-20 rounded-full bg-cover bg-center ring-1 ring-black/10 shadow-lg mb-8"
-              >
-                <ShieldCheck className="w-10 h-10 text-[#C5A267] drop-shadow" />
-              </div>
-              <h3 className="text-2xl font-serif mb-4 text-gray-900">Master your style</h3>
-              <p className="text-xl text-gray-600">Find your unique taste</p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="feature-item text-center">
-              <div
-                className="inline-flex bg-[#606061] items-center justify-center w-20 h-20 rounded-full bg-cover bg-center ring-1 ring-black/10 shadow-lg mb-8"
-              >
-                <Trophy className="w-10 h-10 text-[#C5A267] drop-shadow-md" />
-              </div>
-              <h3 className="text-2xl font-serif mb-4 text-gray-900">Weekly forecasts</h3>
-              <p className="text-xl text-gray-600">Learn tips of expert designers</p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="feature-item text-center">
-              <div
-                className="inline-flex bg-[#606061] items-center justify-center w-20 h-20 rounded-full bg-cover bg-center ring-1 ring-black/10 shadow-lg mb-8"
-              >
-                <Clock className="w-10 h-10 text-[#C5A267] drop-shadow-md" />
-              </div>
-              <h3 className="text-2xl font-serif mb-4 text-gray-900">Better investing</h3>
-              <p className="text-xl text-gray-600">Learn the secrets of design ROI</p>
-            </div>
+      {/* Benefits Section */}
+      <section className="py-20 sm:py-28 bg-gradient-to-br from-[#C5A267] via-[#606061] to-[#222]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+          {/* Right side: Benefits */}
+          <div 
+            ref={benefitsRef}
+            className="bg-white/10 backdrop-blur-sm p-10 rounded-xl shadow-xl border border-white/20"
+          >
+            <h3 className="text-3xl mb-10 text-white font-bold text-center tracking-wide">
+              Why take the quiz consultation?
+            </h3>
+            <ul className="flex flex-col gap-7">
+              {/* Benefit 1 */}
+              <li className="flex flex-col sm:flex-row sm:items-start gap-4 bg-white/5 rounded-lg p-5 shadow-sm hover:shadow-lg transition-shadow">
+                <div className="flex-shrink-0 w-12 h-12 bg-[#C5A267] rounded-full flex items-center justify-center shadow-md border-4 border-white/20 mx-auto sm:mx-0 mb-2 sm:mb-0">
+                  <span className="text-white font-bold text-2xl">1</span>
+                </div>
+                <div className="text-center sm:text-left">
+                  <h4 className="text-lg sm:text-xl font-serif text-white font-semibold mb-1 leading-snug tracking-wide">Discover your style</h4>
+                  <p className="text-white/80 text-base sm:text-lg leading-relaxed">Understand your design preferences in just a few minutes with our intelligent algorithm</p>
+                </div>
+              </li>
+              {/* Benefit 2 */}
+              <li className="flex flex-col sm:flex-row sm:items-start gap-4 bg-white/5 rounded-lg p-5 shadow-sm hover:shadow-lg transition-shadow">
+                <div className="flex-shrink-0 w-12 h-12 bg-[#C5A267] rounded-full flex items-center justify-center shadow-md border-4 border-white/20 mx-auto sm:mx-0 mb-2 sm:mb-0">
+                  <span className="text-white font-bold text-2xl">2</span>
+                </div>
+                <div className="text-center sm:text-left">
+                  <h4 className="text-lg sm:text-xl font-serif text-white font-semibold mb-1 leading-snug tracking-wide">Expert recommendation</h4>
+                  <p className="text-white/80 text-base sm:text-lg leading-relaxed">Receive custom design suggestions tailored to your unique taste and lifestyle</p>
+                </div>
+              </li>
+              {/* Benefit 3 */}
+              <li className="flex flex-col sm:flex-row sm:items-start gap-4 bg-white/5 rounded-lg p-5 shadow-sm hover:shadow-lg transition-shadow">
+                <div className="flex-shrink-0 w-12 h-12 bg-[#C5A267] rounded-full flex items-center justify-center shadow-md border-4 border-white/20 mx-auto sm:mx-0 mb-2 sm:mb-0">
+                  <span className="text-white font-bold text-2xl">3</span>
+                </div>
+                <div className="text-center sm:text-left">
+                  <h4 className="text-lg sm:text-xl font-serif text-white font-semibold mb-1 leading-snug tracking-wide">Visualize possibilities</h4>
+                  <p className="text-white/80 text-base sm:text-lg leading-relaxed">See how different styles would transform your specific spaces and rooms</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
