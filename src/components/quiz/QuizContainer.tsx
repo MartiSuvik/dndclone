@@ -11,7 +11,7 @@ import NameCaptureStep from './NameCaptureStep';
 import EmailCaptureStep from './EmailCaptureStep';
 import ProcessingStep from './ProcessingStep';
 import ResultsStep from './ResultsStep';
-import { quizSheetImages } from '../../data/quizSheetImages'; // Import the new sheet images
+import { allRoomImages } from '../../data/quizRoomImages'; // Import our new room images
 
 interface QuizContainerProps {
   quizImages: QuizImage[];
@@ -43,15 +43,15 @@ const QuizContainer: React.FC<QuizContainerProps> = ({ quizImages, triggerFooter
 
   // Function to get random images per room for Step 1
   const getRandomImagesPerRoom = (): QuizImage[] => {
-    // Directly use images from the imported sheet
-    if (!quizSheetImages || quizSheetImages.length === 0) {
+    // Directly use images from the imported room JSONs
+    if (!allRoomImages || allRoomImages.length === 0) {
       console.warn(
-        'QuizContainer: quizSheetImages from quizSheetImages.ts is not available or is empty. ' +
-        'Step 1 of the quiz will have no images. Ensure quizSheetImages.ts is correctly populated and exported.'
+        'QuizContainer: allRoomImages from quizRoomImages.ts is not available or is empty. ' +
+        'Step 1 of the quiz will have no images. Ensure JSON files are correctly loaded.'
       );
       return [];
     }
-    return quizSheetImages;
+    return allRoomImages;
   };
 
   // Initialize quiz images when starting the quiz
@@ -95,9 +95,10 @@ const QuizContainer: React.FC<QuizContainerProps> = ({ quizImages, triggerFooter
     }
   }, [inView]);
   
-  // Process quiz results
-  const calculateResults = () => {
-    // Simulate processing delay for effect
+  // Fallback results calculator (unused now that webhook handles results)
+  // This is kept for reference but the webhook response processing in EmailCaptureStep is now the source of truth
+  const _calculateResultsLegacy = () => {
+    console.warn("Legacy results calculation called - this should not be used anymore");
     setTimeout(() => {
       const results = processQuizData(quizData);
       setQuizData(prev => ({
@@ -259,10 +260,7 @@ const QuizContainer: React.FC<QuizContainerProps> = ({ quizImages, triggerFooter
           <EmailCaptureStep
             quizData={quizData}
             updateQuizData={updateQuizData}
-            nextStep={() => {
-              calculateResults();
-              nextStep();
-            }}
+            nextStep={nextStep} // Let EmailCaptureStep handle the next step directly
             prevStep={prevStep}
           />
         );

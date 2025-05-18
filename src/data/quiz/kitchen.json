@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Charcoal Minimal",
+    "description": "black wood textures, dark stone backsplash, linear lighting, built-in appliances, grey velvet stools, urban view, high contrast elegance",
+    "link": "https://res.cloudinary.com/designcenter/image/upload/v1747564919/Modern_2_rmnmwc.avif"
+  },
+  {
+    "title": "Textured Harmony",
+    "description": "quilted cabinet fronts, warm wood tones, integrated dining table, stone feature wall, ambient shelf lighting, matte finishes",
+    "link": "https://res.cloudinary.com/designcenter/image/upload/v1747564924/Modern_10_cyquot.avif"
+  },
+  {
+    "title": "Bold Contrast",
+    "description": "mustard yellow cabinets, white marble veining, fluted glass, black accents, brass fixtures, mid-century modern energy, color pop",
+    "link": "https://res.cloudinary.com/designcenter/image/upload/v1747564920/Modern_4_sfjape.avif"
+  },
+  {
+    "title": "Retro Luxe",
+    "description": "walnut cabinetry, bookmatched marble backsplash, reeded glass, grid symmetry, warm modernism, ambient strip lights, soft luxury",
+    "link": "https://res.cloudinary.com/designcenter/image/upload/v1747564919/Modern_3_ghx8wp.avif"
+  },
+  {
+    "title": "Mint Fusion",
+    "description": "pastel green fluting, rose gold accents, light oak cabinets, pendant lighting, sculptural layout, glossy stone, artful warmth",
+    "link": "https://res.cloudinary.com/designcenter/image/upload/v1747564921/Modern_6_noadoc.avif"
+  },
+  {
+    "title": "Zen Minimalism",
+    "description": "taupe and white flat panels, white marble island, matte black fixtures, recessed lighting, no handles, sleek and balanced",
+    "link": "https://res.cloudinary.com/designcenter/image/upload/v1747564922/Modern_7_vrqagz.avif"
+  },
+  {
+    "title": "Dark Opulence",
+    "description": "gold veined marble backsplash, matte black cabinetry, suspended lights, herringbone wood floors, floating table slab, moody elegance",
+    "link": "https://res.cloudinary.com/designcenter/image/upload/v1747564923/Modern_8_zrcun1.avif"
+  },
+  {
+    "title": "Gallery Noir",
+    "description": "black glossy island, tall glass cabinetry, open garden view, wood panel accents, modern pendant arc, refined gallery styling",
+    "link": "https://res.cloudinary.com/designcenter/image/upload/v1747564923/Modern_9_xunxpe.avif"
+  },
+  {
+    "title": "Soft Modernism",
+    "description": "matte green cabinetry, wood backsplash, rounded corners, natural light, bar stools, pendant sculpture, cozy and calm modernity",
+    "link": "https://res.cloudinary.com/designcenter/image/upload/v1747564924/Modern_10_cyquot.avif"
+  },
+  {
+    "title": "Fluid Design",
+    "description": "curved kitchen island, champagne beige finish, black and ivory stone counter, sculptural lights, dark wood backdrop, high-end minimal",
+    "link": "https://res.cloudinary.com/designcenter/image/upload/v1747564924/Modern_ywhvho.avif"
+  },
+    {
+        "title": "Urban Classic",
+        "description": "white lacquer cabinetry, marble countertops, integrated dining table, brick accent wall, modern traditional blend, chrome finishes, large windows",
+        "link": "https://res.cloudinary.com/designcenter/image/upload/v1747565845/Traditional_2_opoidt.avif"
+    },
+    {
+        "title": "Dark Precision",
+        "description": "dark wood cabinetry, sleek marble island, stainless steel accents, pendant lighting, ultra-modern symmetry, white backsplash, recessed lights",
+        "link": "https://res.cloudinary.com/designcenter/image/upload/v1747565846/Traditional_3_leafkm.avif"
+    },
+    {
+        "title": "Heritage Minimal",
+        "description": "classic frame cabinetry, muted tones, vintage-inspired hardware, wood flooring, steel panels, elegant utility, integrated dining",
+        "link": "https://res.cloudinary.com/designcenter/image/upload/v1747565847/Traditional_4_wyqtmr.avif"
+    },
+    {
+        "title": "Refined Colonial",
+        "description": "all-white cabinetry, marble details, dual materials, decorative light fixture, transitional aesthetic, wide layout, traditional windows",
+        "link": "https://res.cloudinary.com/designcenter/image/upload/v1747565848/Traditional_5_lupipr.avif"
+    },
+    {
+        "title": "Showcase Pantry",
+        "description": "high gloss white, glass cabinet doors, wooden accents, open shelving, professional kitchen, clean and bright, layered lighting",
+        "link": "https://res.cloudinary.com/designcenter/image/upload/v1747565849/Traditional_6_r1xkgb.avif"
+    },
+    {
+        "title": "Rustic Charm",
+        "description": "wood-paneled walls, tiled backsplash, open herb racks, shaker cabinetry, warm lighting, farmhouse ambiance, decorative glass displays",
+        "link": "https://res.cloudinary.com/designcenter/image/upload/v1747565851/Traditional_7_c7mj8d.avif"
+    },
+    {
+        "title": "Country Pastel",
+        "description": "stone wall backdrop, pastel blue cabinetry, open shelving, rustic industrial lighting, wood countertops, traditional charm, high ceilings",
+        "link": "https://res.cloudinary.com/designcenter/image/upload/v1747565852/Traditional_8_jy8num.avif"
+    },
+    {
+        "title": "Baroque Luxury",
+        "description": "ornate details, gold chandelier, cream cabinetry, classic molding, tiled backsplash, royal ambiance, rich color palette",
+        "link": "https://res.cloudinary.com/designcenter/image/upload/v1747565853/Traditional_9_zk6hsg.avif"
+    },
+    {
+        "title": "Palatial Grandeur",
+        "description": "regal columns, coffered ceiling, white cabinets, dark marble backsplash, wine storage, symmetrical design, old-world elegance",
+        "link": "https://res.cloudinary.com/designcenter/image/upload/v1747565857/Traditional_10_gvkjok.avif"
+    },
+    {
+        "title": "Contemporary Cottage",
+        "description": "light oak cabinetry, black countertops, white framing, built-in display units, modern classic fusion, cozy and clean lines",
+        "link": "https://res.cloudinary.com/designcenter/image/upload/v1747565858/Traditional_ocuhcb.avif"
+    },
+  {
+    "title": "Champagne Gloss",
+    "description": "glass-front cabinets, marble veining backsplash, orb chandelier, warm beige tones, brass accents, integrated dining, herringbone wood floor",
+    "link": "https://res.cloudinary.com/designcenter/image/upload/v1747566403/Luxury_Glam_2_mm8mwe.avif"
+  },
+  {
+    "title": "Velvet Noir",
+    "description": "dark lacquer cabinets, glass vitrine island, bookmatched stone backsplash, polished wood dining, tufted leather chairs, gold accessories, paneled symmetry",
+    "link": "https://res.cloudinary.com/designcenter/image/upload/v1747566399/Luxury_Glam_k0qijr.avif"
+  }
+]

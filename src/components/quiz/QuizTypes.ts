@@ -6,10 +6,13 @@ export interface QuizImage {
   url: string;
   room: string;
   style: string;
+  description?: string; // Optional description field for better result generation
 }
 
 export interface QuizResults {
   mainStyle: string;
+  title?: string;       // AI-generated title from make.com
+  description?: string; // AI-generated description from make.com
   subStyles: string[];
   recommendedImages: QuizImage[];
 }

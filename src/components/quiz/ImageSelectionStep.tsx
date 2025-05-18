@@ -81,7 +81,7 @@ const ImageSelectionStep: React.FC<StepProps> = ({
           ref={titleRef}
           className="opacity-0 text-2xl sm:text-3xl lg:text-4xl font-serif mb-4 sm:mb-6"
         >
-          Select the rooms that make you swoon
+          Select the rooms that resonate with you
         </h2>
         <p className="text-base sm:text-lg md:text-xl text-white/80 mb-4 sm:mb-6 font-light">
           Click on any images that resonate with your style vision. These selections will help us understand your aesthetic preferences.
@@ -145,7 +145,12 @@ const ImageSelectionStep: React.FC<StepProps> = ({
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-70"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80"></div>
+                
+                {/* Display title overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
+                  <h3 className="text-sm sm:text-base font-medium line-clamp-1">{image.title}</h3>
+                </div>
               </div>
               {quizData.selectedImages.some(img => img.id === image.id) && (
                 <div className="absolute top-3 right-3 bg-[#C5A267] text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg z-10">
@@ -159,7 +164,7 @@ const ImageSelectionStep: React.FC<StepProps> = ({
       {/* Desktop grid */}
       <div 
         ref={gridRef}
-        className="hidden lg:grid grid-cols-2 md:grid-cols-3 gap-4 max-h-[70vh] overflow-y-auto pr-4 pl-2 custom-scrollbar pt-4 pb-4"
+        className="hidden lg:grid grid-cols-2 md:grid-cols-2 gap-4 max-h-[70vh] overflow-y-auto pr-4 pl-2 custom-scrollbar pt-4 pb-4"
       >
         {availableImages.map(image => (
           <div 
@@ -179,7 +184,12 @@ const ImageSelectionStep: React.FC<StepProps> = ({
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-70"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80"></div>
+              
+              {/* Display title overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
+                <h3 className="text-sm sm:text-base font-medium line-clamp-1">{image.title}</h3>
+              </div>
             </div>
             {quizData.selectedImages.some(img => img.id === image.id) && (
               <div className="absolute top-3 right-3 bg-[#C5A267] text-white w-8 h-8 rounded-full flex items-center justify-center shadow-lg z-10">

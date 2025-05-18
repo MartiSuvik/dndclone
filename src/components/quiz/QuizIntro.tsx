@@ -62,7 +62,7 @@ const QuizIntro: React.FC<QuizIntroProps> = ({ startQuiz }) => {
         <div className="space-y-8">
           <h2 
             ref={headingRef}
-            className="text-4xl sm:text-5xl md:text-6xl font-serif text-white leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl font-serif text-white leading-relaxed"
           >
             Discover Your Ideal Interior Style
           </h2>
@@ -83,6 +83,16 @@ const QuizIntro: React.FC<QuizIntroProps> = ({ startQuiz }) => {
             />
             <div className="absolute inset-0 rounded-lg shadow-inner bg-gradient-to-t via-transparent to-transparent"></div>
           </div>
+
+        <div className="mb-8 lg:hidden">
+          <button
+            onClick={handleStartQuiz}
+            className="w-full bg-[#C5A267] hover:bg-[#B49157] text-white px-8 py-4 text-xl font-medium transition-all duration-300 flex items-center justify-center gap-3 min-h-[52px] transform hover:translate-y-[-2px] hover:shadow-lg"
+          >
+            Begin Your Style Journey
+            <ArrowRight className="w-5 h-5" />
+          </button>
+        </div>
           
           <div className="hidden lg:block">
             <button
@@ -101,42 +111,41 @@ const QuizIntro: React.FC<QuizIntroProps> = ({ startQuiz }) => {
           ref={benefitsRef}
           className="bg-white/10 backdrop-blur-sm p-10 rounded-xl shadow-xl border border-white/20"
         >
-          <h3 className="text-3xl font-serif mb-8 text-white">
+          <h3 className="text-3xl font-serif mb-10 text-white font-bold tracking-tight text-left">
             Why take the quiz consultation?
           </h3>
-          
-          <ul className="space-y-8">
-            <li className="flex gap-5">
-              <div className="flex-shrink-0 w-10 h-10 bg-[#C5A267] rounded-full flex items-center justify-center shadow-md">
-                <span className="text-white font-bold text-lg">1</span>
+          <ul className="flex flex-col gap-7">
+            {/* Benefit 1 */}
+            <li className="flex items-start gap-4 bg-white/5 rounded-lg p-5 shadow-sm hover:shadow-lg transition-shadow">
+              <div className="flex-shrink-0 w-12 h-12 bg-[#C5A267] rounded-full flex items-center justify-center shadow-md border-4 border-white/20">
+                <span className="text-white font-bold text-2xl">1</span>
               </div>
               <div>
-                <h4 className="text-xl font-serif text-white mb-2">Discover your style</h4>
-                <p className="text-white/80 text-lg">Understand your design preferences in just a few minutes with our intelligent algorithm</p>
+                <h4 className="text-lg sm:text-xl font-serif text-white font-semibold mb-1 leading-snug">Discover your style</h4>
+                <p className="text-white/80 text-base sm:text-lg leading-relaxed">Understand your design preferences in just a few minutes with our intelligent algorithm</p>
               </div>
             </li>
-            
-            <li className="flex gap-5">
-              <div className="flex-shrink-0 w-10 h-10 bg-[#C5A267] rounded-full flex items-center justify-center shadow-md">
-                <span className="text-white font-bold text-lg">2</span>
+            {/* Benefit 2 */}
+            <li className="flex items-start gap-4 bg-white/5 rounded-lg p-5 shadow-sm hover:shadow-lg transition-shadow">
+              <div className="flex-shrink-0 w-12 h-12 bg-[#C5A267] rounded-full flex items-center justify-center shadow-md border-4 border-white/20">
+                <span className="text-white font-bold text-2xl">2</span>
               </div>
               <div>
-                <h4 className="text-xl font-serif text-white mb-2">Expert recommendations</h4>
-                <p className="text-white/80 text-lg">Receive custom design suggestions tailored to your unique taste and lifestyle</p>
+                <h4 className="text-lg sm:text-xl font-serif text-white font-semibold mb-1 leading-snug">Expert recommendation</h4>
+                <p className="text-white/80 text-base sm:text-lg leading-relaxed">Receive custom design suggestions tailored to your unique taste and lifestyle</p>
               </div>
             </li>
-            
-            <li className="flex gap-5">
-              <div className="flex-shrink-0 w-10 h-10 bg-[#C5A267] rounded-full flex items-center justify-center shadow-md">
-                <span className="text-white font-bold text-lg">3</span>
+            {/* Benefit 3 */}
+            <li className="flex items-start gap-4 bg-white/5 rounded-lg p-5 shadow-sm hover:shadow-lg transition-shadow">
+              <div className="flex-shrink-0 w-12 h-12 bg-[#C5A267] rounded-full flex items-center justify-center shadow-md border-4 border-white/20">
+                <span className="text-white font-bold text-2xl">3</span>
               </div>
               <div>
-                <h4 className="text-xl font-serif text-white mb-2">Visualize possibilities</h4>
-                <p className="text-white/80 text-lg">See how different styles would transform your specific spaces and rooms</p>
+                <h4 className="text-lg sm:text-xl font-serif text-white font-semibold mb-1 leading-snug">Visualize possibilities</h4>
+                <p className="text-white/80 text-base sm:text-lg leading-relaxed">See how different styles would transform your specific spaces and rooms</p>
               </div>
             </li>
           </ul>
-          
           <div className="mt-10 lg:hidden">
             <button
               onClick={handleStartQuiz}
