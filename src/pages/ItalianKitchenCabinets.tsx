@@ -288,6 +288,79 @@ const ItalianKitchenCabinets = () => {
         </div>
       </motion.section>
       
+      {/* Video Section - NEW */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Video */}
+              <div className="relative">
+                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                  <iframe
+                    src="https://player.cloudinary.com/embed/?cloud_name=designcenter&public_id=Kitchen-remodel&profile=cld-default"
+                    width="640"
+                    height="360" 
+                    style={{ height: 'auto', width: '100%', aspectRatio: '640 / 360' }}
+                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                    frameBorder="0"
+                    title="Kitchen Remodel Process Video"
+                  />
+                </div>
+              </div>
+              
+              {/* Text Content */}
+              <div className="lg:pl-8">
+                <h2 className="text-3xl sm:text-4xl font-serif mb-8 text-[#2C3E2D]">
+                  What You Can Expect From Us
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-[#D6A85B] flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white font-bold text-sm">1</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-medium mb-2 text-gray-900">Initial Consultation & Design</h3>
+                      <p className="text-gray-700">We'll discuss your vision, measure your space, and create custom designs that maximize both style and functionality for your NYC home.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-[#D6A85B] flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white font-bold text-sm">2</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-medium mb-2 text-gray-900">Expert Craftsmanship</h3>
+                      <p className="text-gray-700">Your cabinets are handcrafted in Italy using premium materials and traditional techniques, ensuring exceptional quality and durability.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-[#D6A85B] flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white font-bold text-sm">3</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-medium mb-2 text-gray-900">Professional Installation</h3>
+                      <p className="text-gray-700">Our experienced team handles every detail of the installation process, working within NYC building requirements and co-op regulations.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-full bg-[#D6A85B] flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white font-bold text-sm">4</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-medium mb-2 text-gray-900">Ongoing Support</h3>
+                      <p className="text-gray-700">We provide comprehensive warranty coverage and ongoing support to ensure your Italian kitchen continues to perform beautifully for years to come.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Showcase Section - IMPROVED WITH EQUAL-SIZED COLUMNS */}
       <section 
         ref={showcaseRef}
