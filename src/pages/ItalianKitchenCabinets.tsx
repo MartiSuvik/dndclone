@@ -496,7 +496,7 @@ const ItalianKitchenCabinets = () => {
                   <Star key={i} className="w-6 h-6 fill-[#D6A85B] text-[#D6A85B]" />
                 ))}
               </div>
-              <p className="text-lg">4.9/5 based on 87 reviews</p>
+              <p className="text-lg">4.9/5 based on Yelp reviews</p>
             </div>
           </div>
         </div>
