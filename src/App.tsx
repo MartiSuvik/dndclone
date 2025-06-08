@@ -18,7 +18,7 @@ const Designers = lazy(() => import('./pages/Designers'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const CraftedCalm = lazy(() => import('./pages/CraftedCalm'));
-const ItalianKitchens = lazy(() => import('./pages/ItalianKitchens'));
+const ItalianKitchenCabinets = lazy(() => import('./pages/ItalianKitchenCabinets')); // Add this import
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -103,8 +103,8 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>D&D Design Center | Luxury Custom Furniture Across America</title>
-        <meta name="description" content="Luxury custom furniture and high-end interior designs across the U.S." />
+        <title>Luxury Custom Furniture Brooklyn, NY | D&D Design Center</title>
+        <meta name="description" content="Custom Italian furniture, kitchens, closets & vanities in NYC. Masterfully handmade interiors for American homes. Re-model your space with Italian artistry." />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="D&D Design Center" />
         <meta property="og:description" content="Luxury interiors with bespoke design solutions." />
@@ -138,7 +138,7 @@ function App() {
                   <Route path="/privacy" element={<Privacy />} />
                   <Route path="/terms" element={<Terms />} />
                   <Route path="/crafted-calm" element={<CraftedCalm />} />
-                  <Route path="/italian-kitchens-nyc" element={<ItalianKitchens />} />
+                  <Route path="/italian-kitchen-cabinets" element={<ItalianKitchenCabinets />} /> {/* Add this route */}
                   <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
               </Suspense>
