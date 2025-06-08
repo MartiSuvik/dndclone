@@ -18,6 +18,7 @@ const Designers = lazy(() => import('./pages/Designers'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const CraftedCalm = lazy(() => import('./pages/CraftedCalm'));
+const ItalianKitchenCabinets = lazy(() => import('./pages/ItalianKitchenCabinets')); // Add this import
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -137,6 +138,7 @@ function App() {
                   <Route path="/privacy" element={<Privacy />} />
                   <Route path="/terms" element={<Terms />} />
                   <Route path="/crafted-calm" element={<CraftedCalm />} />
+                  <Route path="/italian-kitchen-cabinets" element={<ItalianKitchenCabinets />} /> {/* Add this route */}
                   <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
               </Suspense>
