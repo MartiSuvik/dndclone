@@ -298,8 +298,8 @@ const ItalianKitchenCabinets = () => {
                 <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
                   <iframe
                     src="https://player.cloudinary.com/embed/?cloud_name=designcenter&public_id=Kitchen-remodel&profile=cld-default"
-                    width="640"
-                    height="360" 
+                    width="360"
+                    height="640" 
                     style={{ height: 'auto', width: '100%', aspectRatio: '640 / 360' }}
                     allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
                     allowFullScreen
