@@ -299,8 +299,8 @@ const ItalianKitchenCabinets = () => {
                   <iframe
                     src="https://player.cloudinary.com/embed/?cloud_name=designcenter&public_id=Kitchen-remodel&profile=cld-default"
                     width="360"
-                    height="100" 
-                    style={{ height: 'auto', width: '100%', aspectRatio: '360 / 640' }}
+                    height="640" 
+                    style={{ height: 'auto', width: '50%', aspectRatio: '640 / 360' }}
                     allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
                     allowFullScreen
                     frameBorder="0"
