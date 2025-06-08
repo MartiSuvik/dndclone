@@ -374,7 +374,7 @@ const ItalianKitchenCabinets = () => {
             </h2>
             <div className="w-24 h-1 bg-[#D6A85B] mx-auto my-6"></div>
             <p className="text-lg text-gray-700">
-              Whether you're after clean-lined modern cabinets or detailed traditional joinery, our curated kitchen collections include exclusive finishes, hardware, and design options. Each kitchen is built for real-life use in New York apartments, brownstones, and townhomes — without compromising on Italian craftsmanship.
+              Whether you're after clean-lined modern cabinets or detailed traditional joinery, our curated kitchen collections include exclusive finishes, hardware, and design options. Each kitchen is built for real-life use in New York apartments, brownstones, and townhomes - without compromising on Italian craftsmanship.
             </p>
           </div>
           
@@ -557,7 +557,7 @@ const ItalianKitchenCabinets = () => {
             
             <div className="prose prose-lg mx-auto mt-8">
               <p className="text-lg leading-relaxed text-gray-700">
-                Italian cabinetry is known for its precision, aesthetic balance, and longevity. Unlike generic kitchen packages, our offerings blend artisanal design with spatial efficiency — ideal for Manhattan lofts, Brooklyn brownstones, and modern condos alike. Every project is planned with function and style in mind. From door hardware to integrated lighting, no detail is overlooked.
+                Italian cabinetry is known for its precision, aesthetic balance, and longevity. Unlike generic kitchen packages, our offerings blend artisanal design with spatial efficiency - ideal for Manhattan lofts, Brooklyn brownstones, and modern condos alike. Every project is planned with function and style in mind. From door hardware to integrated lighting, no detail is overlooked.
               </p>
               
               <h3 className="text-2xl font-serif mt-12 mb-6 text-gray-900">The Italian Craftsmanship Advantage</h3>
