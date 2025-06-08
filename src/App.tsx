@@ -103,8 +103,8 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>D&D Design Center | Luxury Custom Furniture Across America</title>
-        <meta name="description" content="Luxury custom furniture and high-end interior designs across the U.S." />
+        <title>Luxury Custom Furniture Brooklyn, NY | D&D Design Center</title>
+        <meta name="description" content="Custom Italian furniture, kitchens, closets & vanities in NYC. Masterfully handmade interiors for American homes. Re-model your space with Italian artistry." />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="D&D Design Center" />
         <meta property="og:description" content="Luxury interiors with bespoke design solutions." />
