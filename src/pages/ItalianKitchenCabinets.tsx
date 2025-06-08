@@ -300,7 +300,7 @@ const ItalianKitchenCabinets = () => {
                     src="https://player.cloudinary.com/embed/?cloud_name=designcenter&public_id=Kitchen-remodel&profile=cld-default"
                     width="360"
                     height="640" 
-                    style={{ height: 'auto', width: '50%', aspectRatio: '640 / 360' }}
+                    style={{ height: 'auto', width: '90%', aspectRatio: '640 / 360' }}
                     allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
                     allowFullScreen
                     frameBorder="0"
