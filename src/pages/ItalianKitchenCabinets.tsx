@@ -20,7 +20,12 @@ const useFadeIn = (threshold = 0.1, triggerOnce = true) => {
   return { ref, hasAnimated: inView || hasAnimated };
 };
 
-const FAQ = ({ question, answer }) => {
+interface FAQProps {
+  question: string;
+  answer: string;
+}
+
+const FAQ = ({ question, answer }: FAQProps) => {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
