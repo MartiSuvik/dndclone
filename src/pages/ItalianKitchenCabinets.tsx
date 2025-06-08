@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone, Star, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Phone, Star, CheckCircle2, MapPin, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { gsap } from 'gsap';
@@ -24,10 +24,10 @@ const ItalianKitchenCabinets = () => {
   const { ref: heroRef, hasAnimated: heroAnimated } = useFadeIn();
   const { ref: showcaseRef, hasAnimated: showcaseAnimated } = useFadeIn();
   const { ref: ctaRef, hasAnimated: ctaAnimated } = useFadeIn();
-  const { ref: contentRef, hasAnimated: contentAnimated } = useFadeIn();
+  const { ref: contentRef } = useFadeIn();
   const { ref: testimonialsRef, hasAnimated: testimonialsAnimated } = useFadeIn();
   
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [, setIsDesktop] = useState(false);
   
   // Check if we're on desktop
   useEffect(() => {
