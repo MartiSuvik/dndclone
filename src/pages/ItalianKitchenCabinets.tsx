@@ -240,7 +240,7 @@ const ItalianKitchenCabinets = () => {
           <div className="absolute inset-0 bg-black/60"></div> {/* Darker overlay */}
         </div>
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white text-center md:text-left flex flex-col md:flex-row items-center">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10 text-white text-center md:text-left flex flex-col md:flex-row items-center">
           <div className="md:w-3/5 md:pr-12">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-6 leading-tight">
               Custom Italian Kitchen Cabinets in NYC
@@ -290,7 +290,7 @@ const ItalianKitchenCabinets = () => {
       
       {/* Video Section - NEW */}
       <section className="py-16 sm:py-20 lg:py-28 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               {/* Video */}
@@ -366,7 +366,7 @@ const ItalianKitchenCabinets = () => {
         ref={showcaseRef}
         className="py-16 sm:py-20 lg:py-28 bg-gray-50"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
           {/* Enhanced section header with visual separator */}
           <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif mb-4 sm:mb-6 text-[#2C3E2D]">
@@ -448,7 +448,7 @@ const ItalianKitchenCabinets = () => {
         ref={logosRef}
         className="py-12 sm:py-16 bg-[#F8F8F8]"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-8 sm:mb-10">
               <h2 className="text-xl sm:text-2xl font-serif mb-4 sm:mb-6 text-gray-900">Partnering with Italy's Finest Brands</h2>
@@ -517,7 +517,7 @@ const ItalianKitchenCabinets = () => {
         </div>
         
         <motion.div 
-          className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+          className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: ctaAnimated ? 1 : 0, y: ctaAnimated ? 0 : 20 }}
           transition={{ duration: 0.8 }}
@@ -547,7 +547,7 @@ const ItalianKitchenCabinets = () => {
         ref={contentRef} 
         className="py-16 sm:py-20 lg:py-28 bg-white"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
           <div className="max-w-4xl mx-auto">
             {/* Improved section heading with visual separator */}
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif mb-3 sm:mb-4 text-center text-[#2C3E2D]">
@@ -639,19 +639,7 @@ const ItalianKitchenCabinets = () => {
                     a: "Yes, we frequently collaborate with architects, designers, and contractors. We can join your existing team or help you assemble the right professionals for your project."
                   }
                 ].map((faq, index) => (
-                  <div key={index} className="border-b border-gray-200 last:border-b-0">
-                    <button 
-                      className="w-full text-left py-4 sm:py-5 flex justify-between items-center focus:outline-none"
-                      onClick={() => {}} // FAQ functionality from existing code
-                      aria-expanded={false}
-                    >
-                      <h4 className="text-base sm:text-lg font-medium text-gray-900">{faq.q}</h4>
-                      <ChevronDown className="w-4 sm:w-5 h-4 sm:h-5 text-gray-500" />
-                    </button>
-                    <div className="overflow-hidden transition-all duration-300 max-h-0 opacity-0">
-                      <p className="text-gray-700 text-sm sm:text-base">{faq.a}</p>
-                    </div>
-                  </div>
+                  <FAQ key={index} question={faq.q} answer={faq.a} />
                 ))}
               </div>
             </div>
@@ -664,7 +652,7 @@ const ItalianKitchenCabinets = () => {
         ref={testimonialsRef}
         className="py-16 sm:py-20 lg:py-28 bg-gray-50"
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif mb-3 sm:mb-4 text-center text-[#2C3E2D]">
             What NYC Homeowners Say
           </h2>
@@ -723,7 +711,7 @@ const ItalianKitchenCabinets = () => {
       
       {/* Location Section */}
       <section className="py-16 sm:py-20 lg:py-28 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif mb-3 sm:mb-4 text-center text-[#2C3E2D]">
               Visit Our Italian Kitchen Showroom in Brooklyn
@@ -797,7 +785,7 @@ const ItalianKitchenCabinets = () => {
       
       {/* Final CTA */}
       <section className="py-16 sm:py-20 bg-[#1A1A1A] text-white text-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+        <div className="container mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 max-w-3xl">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif mb-6 sm:mb-8">
             Ready to Transform Your NYC Kitchen?
           </h2>
