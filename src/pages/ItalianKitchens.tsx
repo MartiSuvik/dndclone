@@ -268,7 +268,7 @@ const ItalianKitchens: React.FC = () => {
     },
     {
       question: 'What is the price range for Italian kitchen cabinets?',
-      answer: 'Custom Italian kitchen cabinets typically range from $40,000 to $100,000+ depending on size, materials, and complexity. We offer various price points while maintaining the signature Italian quality and design excellence. During your consultation, we'll provide transparent pricing based on your specific needs and preferences.'
+      answer: 'Custom Italian kitchen cabinets typically range from $40,000 to $100,000+ depending on size, materials, and complexity. We offer various price points while maintaining the signature Italian quality and design excellence. During your consultation, we\'ll provide transparent pricing based on your specific needs and preferences.'
     },
     {
       question: 'Can I see samples of your Italian kitchen cabinets?',
@@ -281,13 +281,13 @@ const ItalianKitchens: React.FC = () => {
     {
       name: 'Sarah L.',
       location: 'Upper East Side, Manhattan',
-      text: 'The Italian kitchen cabinets transformed our pre-war apartment completely. The team understood exactly how to blend modern functionality with our home's classic character.',
+      text: 'The Italian kitchen cabinets transformed our pre-war apartment completely. The team understood exactly how to blend modern functionality with our home\'s classic character.',
       rating: 5
     },
     {
       name: 'Michael R.',
       location: 'Brooklyn Heights',
-      text: 'From design to installation, the process was seamless. Our kitchen now has that distinctive Italian elegance while perfectly fitting our brownstone's dimensions.',
+      text: 'From design to installation, the process was seamless. Our kitchen now has that distinctive Italian elegance while perfectly fitting our brownstone\'s dimensions.',
       rating: 5
     },
     {
